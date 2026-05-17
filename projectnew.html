@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VertechCoincapital-Projects</title>
+  <link rel="icon" type="image/png" href="images/new-logo-BuRQRJTO.png">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+  <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body style="overflow-x: hidden;    font-family: 'Outfit', sans-serif !important;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/new-logo-BuRQRJTO.png" alt="VertechCoin Logo" class="me-2" style="height: 55px;">
+        <span>VertechCoincapital</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1"></i>
+            Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="projectnew.html"><i class="fa-solid fa-diagram-project me-1"></i>
+              Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-works.html"><i class="fa-solid fa-lightbulb me-1"></i> How
+              it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="invest.html"><i class="fa-solid fa-users me-1"></i>
+              Investors</a></li>
+          <li class="nav-item"><a class="nav-link" href="entrepreneurs.html"><i class="fa-solid fa-briefcase me-1"></i>
+              Entrepreneurs</a></li>
+          <li class="nav-item"><a class="nav-link" href="token.html"><i class="fa-solid fa-coins me-1"></i> Tokenomics</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="whitepaper.html"><i class="fa-solid fa-file-lines me-1"></i>
+              Whitepaper</a></li>
+        </ul>
+      </div>
+      <div class="nav-buttons d-none d-lg-block">
+        <button class="btn glass-btn me-2" onclick="alert('Coming soon')"><i class="fa-solid fa-wallet me-1"></i> Buy Now</button>
+        <a href="projects.html"><button class="btn glass-btn"><i class="fa-solid fa-compass me-1"></i> Explore
+            Projects</button></a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+  <section class="progress-status-section my-5 py-5">
+    <div class="container d-flex justify-content-center align-items-center flex-column text-center">
+  
+      <!-- Progress Card -->
+      <div class="progress-card-glass">
+        
+        <!-- Badge -->
+        <div class="progress-badge">
+          <i class="fa-solid fa-spinner fa-spin me-2"></i> Section Under Progress
+        </div>
+  
+        <!-- Icon and Title -->
+        <div class="progress-icon">
+          <i class="fa-solid fa-hammer"></i>
+        </div>
+        <h3 class="progress-title">Work in Progress</h3>
+        <p class="progress-desc">
+          We're currently improving this section to bring you a smoother and richer experience. Stay tuned!
+        </p>
+  
+        <!-- Status Info -->
+        <div class="progress-info">
+          <p><i class="fa-solid fa-clock me-2"></i><strong>Estimated Completion:</strong> Coming Soon</p>
+         
+        </div>
+  
+        <!-- CTA -->
+        <a href="index.html" class="progress-btn"><i class="fa-solid fa-home me-2"></i> Back To Home</a>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  <script>
+    const buttons = document.querySelectorAll('.snackbar-btn');
+    const panels = document.querySelectorAll('.snackbar-panel');
+  
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active from all buttons
+        buttons.forEach(b => b.classList.remove('active'));
+        // Hide all panels
+        panels.forEach(p => p.classList.remove('active'));
+        // Activate clicked tab and related panel
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+  
+
+  
+  <script>
+    const slider = document.getElementById("variationSlider");
+    const variationDisplay = document.getElementById("variation");
+    const coinPrice = document.getElementById("coinPrice");
+    const coinValue = document.getElementById("coinValue");
+    const surplusNote = document.getElementById("surplusNote");
+    const surplusAmount = document.getElementById("surplusAmount");
+  
+    let basePrice = 0.35;
+    let baseValue = 28000;
+  
+    slider.addEventListener("input", function() {
+      let variation = parseInt(this.value);
+      variationDisplay.textContent = variation + "%";
+  
+      // Smooth animation effect
+      variationDisplay.style.transition = "all 0.3s ease";
+      this.style.transition = "all 0.4s ease-out";
+  
+      // Update values smoothly
+      let newPrice = basePrice + (variation * 0.025 / 5);
+      let newValue = baseValue + (variation * 2000 / 5);
+  
+      coinPrice.textContent = "€" + newPrice.toFixed(3);
+      coinValue.textContent = "€" + newValue.toLocaleString();
+  
+      if (variation > 0) {
+        surplusNote.style.display = "flex";
+        surplusAmount.textContent = "€" + (variation * 2000 / 5).toLocaleString();
+      } else {
+        surplusNote.style.display = "none";
+      }
+    });
+  </script>
+  
+  
+  
+
+
+  <!--Modern Footer -->
+<!--Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Brand Info -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h3 class="footer-logo">VertechCoin</h3>
+          <p class="footer-desc flex-grow-1">
+            Where entrepreneurs and investors meet. Fuel innovation with smart funding solutions powered by VertechCoin.
+          </p>
+          <div class="socials">
+            <a href="project1.html"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-medium-m"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links flex-grow-1">
+            <li><a href="whitepaper.html">Whitepaper</a></li>
+            <li><a href="projectnew.html">Projects</a></li>
+            <li><a href="invest.html">Investors</a></li>
+            <li><a href="token.html">Tokenomics</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Legal -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h5 class="footer-heading">Legal</h5>
+          <ul class="footer-links flex-grow-1">
+            <li><a href="/public/Privacy_Policy.pdf" target="_blank">Privacy Policy</a></li>
+            <li><a href="/public/Terms_of_Service.pdf" target="_blank">Terms of Service</a></li>
+            <li><a href="/public/Risk_Disclosure.pdf" target="_blank">Risk Disclosure</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Subscribe -->
+      <!-- <div class="col-lg-3 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column text-center">
+          <h5 class="footer-heading">Stay Updated</h5>
+          <p class="footer-desc flex-grow-1">
+            Get the latest updates on VertechCoin and new project launches
+          </p>
+          <form class="subscribe-form d-flex">
+            <input type="email" class="form-control" placeholder="Enter your email">
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </form>
+        </div>
+      </div> -->
+    </div>
+    <!-- Bottom -->
+    <div class="footer-bottom text-center mt-5">
+      <p>© 2025 VertechCoin. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+  <script>
+// Search filtering logic only
+function searchProjects() {
+  const searchText = document.querySelector('.search-input').value.trim().toLowerCase();
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    const cardTitle = card.querySelector('.card-t').textContent.toLowerCase();
+    const cardDescription = card.querySelector('.small1').textContent.toLowerCase();
+
+    let searchMatch = (searchText === "" || cardTitle.includes(searchText) || cardDescription.includes(searchText));
+
+    if (searchMatch) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+// Attach live search
+document.querySelector('.search-input').addEventListener('input', searchProjects);
+</script>
+
+
+  
+  
+  <script>
+    // Handle tick selection in dropdowns
+document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const menu = this.closest('.dropdown-menu');
+    menu.querySelectorAll('.dropdown-item').forEach(el => el.classList.remove('active'));
+    this.classList.add('active');
+
+    const button = this.closest('.dropdown').querySelector('.dropdown-toggle');
+    button.textContent = this.textContent;
+
+    filterProjects();
+  });
+});
+
+// Filtering logic
+function filterProjects() {
+  const category = document.querySelector('#categoriesDropdown').textContent.trim();
+  const stage = document.querySelector('#stagesDropdown').textContent.trim();
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    const cardCategory = card.getAttribute('data-category');
+    const cardStage = card.getAttribute('data-stage');
+
+    let categoryMatch = (category === "All Categories" || cardCategory === category);
+    let stageMatch = (stage === "All Stages" || cardStage === stage);
+
+    if (categoryMatch && stageMatch) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+  </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".circular-progress").forEach(circle => {
+      const target = circle.getAttribute("data-progress");
+      let value = 0;
+
+      const interval = setInterval(() => {
+        value++;
+        circle.style.setProperty("--progress", value);
+        circle.querySelector(".circular-progress-value").textContent = value + "%";
+
+        if (value >= target) clearInterval(interval);
+      }, 20); // speed (lower = faster)
+    });
+  });
+</script>
+
+<script>
+  // Run after page loads
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop(); 
+    const navLinks = document.querySelectorAll(".custom-navbar .nav-link");
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+  <!-- Custom JS -->
+   <script>
+    //  const apiURL = "http://localhost:5000";
+     const apiURL = "https://vcoin-backend.onrender.com";
+
+  // Fetch and render projects dynamically
+  async function loadProjects() {
+    try {
+      const response = await fetch(`${apiURL}/api/getPublisheddata`);
+      const data = await response.json();
+
+      const projectsContainer = document.getElementById("projectsList");
+      projectsContainer.innerHTML = ""; // Clear previous content
+
+      if (!Array.isArray(data) || data.length === 0) {
+        projectsContainer.innerHTML = `<p class="text-center text-white">No published projects found.</p>`;
+        return;
+      }
+
+      data.forEach(project => {
+        const { projectName, description, pdf, totalGoal, totalAmount } = project;
+
+        // Calculate progress percentage
+        const progress = Math.min(Math.round((totalAmount / totalGoal) * 100), 100);
+
+        // Card HTML
+        const cardHTML = `
+          <div class="col-md-4 mb-4 project-card">
+            <div class="card glass-card p-3 h-100">
+              
+              <!-- Header -->
+              <div class="card-header-section">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge">Startup</span>
+                  <span class="status-badge status-online">
+                    <span class="status-dot"></span> Open
+                  </span>
+                </div>
+                <h5 class="fw-bold card-t">${projectName}</h5>
+                <p class="text-white mb-2 d-flex align-items-center gap-2">
+                  <span class="glass-icon"><i class="fas fa-map-marker-alt"></i></span>
+                  Spain • MVP
+                </p>
+                <p class="small1 text-white">${description}</p>
+              </div>
+
+              <!-- Funding -->
+              <div class="card-funding-section">
+                <div class="d-flex justify-content-between fw-bold">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="glass-icon1"><i class="fas fa-bullseye"></i></span>
+                    <span style="color: rgb(21, 208, 21);">Goal:</span>
+                  </div>
+                  <span>€${totalGoal.toLocaleString()}</span>
+                </div>
+              </div>
+
+              <!-- Ticket Section -->
+              <div class="card-ticket-section">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                      <span class="glass-icon1"><i class="fas fa-ticket-alt"></i></span>
+                      <p class="mb-0 fw-bold text-white">Minimum Ticket:</p>
+                    </div>
+                    <p class="small text-white">Excess rule:</p>
+                  </div>
+                  <div class="text-end">
+                    <p class="mb-0 fw-bold text-white">€100.00</p>
+                    <p class="small text-white badge">Pro-rata</p>
+                  </div>
+                </div>
+
+                <!-- Circular Progress -->
+                <div class="circular-progress-wrapper text-center my-3">
+                  <div class="circular-progress" data-progress="${progress}">
+                    <span class="circular-progress-value">${progress}%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <div class="text-center mt-auto">
+                <button class="view-btn" onclick="downloadPDF('${pdf}')">Download PDF</button>
+              </div>
+
+            </div>
+          </div>
+        `;
+
+        projectsContainer.innerHTML += cardHTML;
+      });
+
+      // Apply circular progress styling
+      document.querySelectorAll(".circular-progress").forEach(elem => {
+        const value = elem.getAttribute("data-progress");
+        elem.style.background = `conic-gradient(rgb(21,208,21) ${value * 3.6}deg, rgba(255,255,255,0.1) ${value * 3.6}deg)`;
+      });
+
+    } catch (error) {
+      console.error("Error loading projects:", error);
+      document.getElementById("projectsList").innerHTML =
+        `<p class="text-center text-danger">Error fetching projects.</p>`;
+    }
+  }
+
+  // PDF open function
+  function downloadPDF(filename) {
+    if (!filename) {
+      alert("No pitch deck available for this project.");
+      return;
+    }
+    window.open(`${apiURL}/uploads/${filename}`, "_blank");
+  }
+
+  // Initialize on page load
+  document.addEventListener("DOMContentLoaded", loadProjects);
+   </script>
+  <script src="script.js"></script>
+</body>
+</html>

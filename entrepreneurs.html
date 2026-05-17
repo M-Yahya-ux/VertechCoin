@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VertechCoincapital-Entreprenuers</title>
+  <link rel="icon" type="image/png" href="images/new-logo-BuRQRJTO.png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/entrepreneurs.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body style=" background: black; overflow-x: hidden;">
+
+
+  <!-- Modal -->
+  <div id="pitchModal" class="modal" >
+    <div class="modal-content">
+      <div class="d-flex justify-content-between flex-row">
+        <h2 class="modal-title">Submit Your Project</h2>
+        <span class="close-btn text-end" onclick="closeForm()">&times;</span>
+
+
+      </div>
+
+      <p class="modal-subtitle">
+        Tell us about your project and upload your pitch deck or business plan
+      </p>
+
+      <form class="pitch-form" id="pitchForm" enctype="multipart/form-data">
+        <!-- Documents -->
+        <div class="form-section">
+          <h3>Documents</h3>
+        <label>Upload pitch deck (PDF, max 10MB)</label>
+  <input type="file" name="pitchDeck" accept=".pdf" required>
+  
+        </div>
+
+     
+      
+        <!-- Company Information -->
+        <div class="form-section" >
+          <h3>Company Information</h3>
+          <div class="form-row">
+            <input type="text" name="companyName" placeholder="Company Name *" required>
+            <input type="url" name="websiteLink" placeholder="Website (https://)" required>
+          </div>
+          <div class="form-row">
+            <input type="number" name="foundedYear" placeholder="Founded (Year)" required>
+            <input type="text" name="location" placeholder="Location (City, Country)" required>
+          </div>
+        </div>
+      
+        <!-- Project Details -->
+        <div class="form-section">
+          <h3>Project Details</h3>
+        
+            <input type="text" name="projectName" placeholder="Project Name">
+           
+      
+          <input type="text" name="oneLinePitch" placeholder="One-line Pitch" required>
+          <textarea name="problemAndSolution" placeholder="Problem & Solution" required></textarea>
+          <div class="form-row">
+          <input type="text" name="targetMarket" placeholder="Target Market" required>
+          <input type="text" name="businessModel" placeholder="Business Model" required>
+        </div>
+        </div>
+      
+        <!-- Financial Information -->
+        <div class="form-section">
+          <h3>Financial Information</h3>
+          <div class="form-row">
+            <input type="number" name="fundingAmountNeaded" placeholder="Funding Amount Needed ($100,000)" required>
+            <input type="number" name="currentRevenue" placeholder="Current Revenue ($0 or current amount)" required>
+          </div>
+          <textarea name="useOfFunds" placeholder="Use of Funds"></textarea>
+        </div>
+      
+        <!-- Team -->
+        <div class="form-section">
+          <h3>Team</h3>
+          <textarea name="founderBackground" placeholder="Founder Background" required></textarea>
+          <div class="form-row">
+            <input  type="number" name="teamSize" placeholder="Team Size" required>
+            <input name="keyTeamMembers" type="text" placeholder="Key Team Members" required>
+          </div>
+        </div>
+      
+        <!-- Traction -->
+        <div class="form-section">
+          <h3>Traction & Progress</h3>
+          <textarea name="currentTraction" placeholder="Current Traction"></textarea required>
+          <div class="form-row">
+            <input type="text" name="currentCustomer" placeholder="Current Customers" required>
+            <input type="text" name="keyPartnerships" placeholder="Key Partnerships" required>
+          </div>
+        </div>
+      
+        <!-- Contact -->
+        <div class="form-section">
+          <h3>Contact Information</h3>
+          <div class="form-row">
+            <input type="text" name="founderName" placeholder="Founder Name *" required>
+            <input type="email" name="email" placeholder="Email *" required>
+          </div>
+          <div class="form-row">
+            <input type="url" name="linkedinProfileLink" placeholder="LinkedIn Profile (https://)" required>
+            <input type="tel" name="phoneNumber" placeholder="Phone (+1 555 123-4567)" required>
+          </div>
+        </div>
+      
+        <!-- Buttons -->
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" onclick="closeForm()">Cancel</button>
+          <button type="submit" class="btn-submit">Submit Project</button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/new-logo-BuRQRJTO.png" alt="VertechCoin Logo" class="me-2" style="height: 55px;">
+        <span>VertechCoincapital</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1"></i>
+            Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="projectnew.html"><i class="fa-solid fa-diagram-project me-1"></i>
+              Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-works.html"><i class="fa-solid fa-lightbulb me-1"></i> How
+              it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="invest.html"><i class="fa-solid fa-users me-1"></i>
+              Investors</a></li>
+          <li class="nav-item"><a class="nav-link" href="entrepreneurs.html"><i class="fa-solid fa-briefcase me-1"></i>
+              Entrepreneurs</a></li>
+          <li class="nav-item"><a class="nav-link" href="token.html"><i class="fa-solid fa-coins me-1"></i> Tokenomics</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="whitepaper.html"><i class="fa-solid fa-file-lines me-1"></i>
+              Whitepaper</a></li>
+        </ul>
+      </div>
+      <div class="nav-buttons d-none d-lg-block">
+        <button class="btn glass-btn me-2" onclick="alert('Coming soon')"><i class="fa-solid fa-wallet me-1"></i> Buy Now</button>
+        <a href="projects.html"><button class="btn glass-btn"><i class="fa-solid fa-compass me-1"></i> Explore
+            Projects</button></a>
+      </div>
+    </div>
+  </nav>
+
+
+
+<!-- 🚀 Entrepreneurs Hero Section -->
+<section class="entrepreneurs-hero">
+    <div class="container text-center animate-on-scroll animate__animated" data-animation="animate__fadeInDown">
+      
+      <!-- Main Heading -->
+      <h1 class="entrepreneurs-title">Funding Beyond Limits</h1>
+      
+      <!-- Sub Text -->
+      <p class="entrepreneurs-text">
+        Publish your project with cash + VertechCoin goals. Upload documents, define excess rules and communicate progress. 
+        Receive community and runway to scale.
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="entrepreneurs-buttons">
+        <a href="#submit" class="btn btn-primary-gradient" onclick="openForm()">Submit Your Project</a>
+        <a href="#process" class="btn btn-outline-light">View Complete Process</a>
+      </div>
+      
+     
+      
+    </div>
+  </section>
+  
+  
+
+
+      <!-- 🔄 Sliding Bar -->
+<div class="sliding-bar">
+  <div class="sliding-track">
+    <div class="slide"><i class="fas fa-fire"></i> VertechCoin Presale Live Now</div>
+    <div class="slide"><i class="fas fa-rocket"></i> Backed by Real Projects</div>
+    <div class="slide"><i class="fas fa-coins"></i> Hybrid Funding Model</div>
+    <div class="slide"><i class="fas fa-globe"></i> Global Community</div>
+    <div class="slide"><i class="fas fa-lock"></i> Audited Smart Contracts</div>
+    <!-- duplicate for seamless loop -->
+    <div class="slide"><i class="fas fa-fire"></i> VertechCoin Presale Live Now</div>
+    <div class="slide"><i class="fas fa-rocket"></i> Backed by Real Projects</div>
+    <div class="slide"><i class="fas fa-coins"></i> Hybrid Funding Model</div>
+    <div class="slide"><i class="fas fa-globe"></i> Global Community</div>
+    <div class="slide"><i class="fas fa-lock"></i> Audited Smart Contracts</div>
+  </div>
+</div>
+
+  
+<!-- V-Shape Cards Section -->
+<section class="vshape-section">
+    <div class="container vshape-container">
+  
+      <!-- Supporting Glassmorphic Heading Card -->
+      <div class="entrepreneurs-card glass-card intro-card mx-auto mb-5 animate-on-scroll animate__animated" data-animation="animate__fadeInDown">
+        <h3 class="card-heading">Funding aligned with your community</h3>
+        <p class="card-text">
+          Define two goals: <span class="highlight">cash and VertechCoin</span>. 
+          Receive capital + committed community. 
+          Decide how to manage excess (<span class="highlight">pro-rata, cap or perks</span>). 
+          <span class="highlight">Transparency at all times.</span>
+        </p>
+      </div>
+  
+      <!-- Row 1 (closer together) -->
+      <div class="v-row row1">
+        <div class="v-card animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+          <div class="icon-box"><i class="fas fa-coins"></i></div>
+          <h3>Hybrid Funding</h3>
+          <p>Receive cash to operate + VertechCoin to align incentives with community.</p>
+        </div>
+        <div class="v-card animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+          <div class="icon-box"><i class="fas fa-users"></i></div>
+          <h3>Committed Community</h3>
+          <p>VertechCoin holders are incentivized in your project's success.</p>
+        </div>
+      </div>
+  
+      <!-- Row 2 (medium gap) -->
+      <div class="v-row row2">
+        <div class="v-card animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+          <div class="icon-box"><i class="fas fa-cogs"></i></div>
+          <h3>Flexible Rules</h3>
+          <p>You decide how to handle excess: pro-rata, cap or convert to perks.</p>
+        </div>
+        <div class="v-card animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+          <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+          <h3>Total Transparency</h3>
+          <p>Direct communication panel with your investors and public metrics.</p>
+        </div>
+      </div>
+  
+      <!-- Row 3 (widest apart) -->
+      <div class="v-row row3">
+        <div class="v-card animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+          <div class="icon-box"><i class="fas fa-handshake"></i></div>
+          <h3>No Intermediaries</h3>
+          <p>Direct connection with capital without hidden fees.</p>
+        </div>
+        <div class="v-card animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+          <div class="icon-box"><i class="fas fa-globe"></i></div>
+          <h3>Global from Day One</h3>
+          <p>Access investors from multiple jurisdictions with automatic compliance.</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+
+
+
+
+
+
+
+
+
+<!-- Offer Types Section -->
+<section class="offer-types-section py-5">
+    <div class="container">
+      <h2 class="section-heading text-center mb-4 animate-on-scroll animate__animated" data-animation="animate__fadeInDown">Available Offer Types</h2>
+      <p class="section-subtext text-center mb-5 animate-on-scroll animate__animated" data-animation="animate__fadeInDown">
+        * Available offer types depend on your jurisdiction and target investor profile
+      </p>
+  
+      <div class="row g-4">
+        
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="offer-card h-100 animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+            <div class="card-header">
+              <h3>Rewards / Perks</h3>
+              <span class="badge-tag easy">Easy</span>
+            </div>
+            <div class="separator"></div>
+            <div class="card-body glass-box1">
+              <p class="desc">Non-financial rewards like products, experiences or discounts.</p>
+              <p><span>Ideal for:</span> Physical products, services, digital content</p>
+              <p><span>Requirements:</span> Minimal legal requirements</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="offer-card h-100 animate-on-scroll animate__animated" data-animation="animate__fadeInDown">
+            <div class="card-header">
+              <h3>Revenue Share</h3>
+              <span class="badge-tag medium">Medium</span>
+            </div>
+            <div class="separator"></div>
+            <div class="card-body glass-box1">
+              <p class="desc">Participation in revenue during a determined period.</p>
+              <p><span>Ideal for:</span> SaaS, eCommerce with clear metrics</p>
+              <p><span>Requirements:</span> Compliance according to jurisdiction</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="offer-card h-100 animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+            <div class="card-header">
+              <h3>Equity-like</h3>
+              <span class="badge-tag advanced">Advanced</span>
+            </div>
+            <div class="separator"></div>
+            <div class="card-body glass-box1">
+              <p class="desc">Instruments similar to equity participation.</p>
+              <p><span>Ideal for:</span> Growing startups, accredited investors</p>
+              <p><span>Requirements:</span> ECSPR / MiCA compliance</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+
+
+
+  <section class="excess-management py-5">
+    <div class="container">
+      <!-- Full Width Intro -->
+      <div class="row mb-5 animate-on-scroll animate__animated" data-animation="animate__fadeInDown">
+        <div class="col-12 text-center">
+          <h2 class="section-title">Excess Management</h2>
+          <p class="section-desc">
+            Practical example: Your project asks for <strong>100,000 VertechCoin</strong> and <strong>$50,000</strong>. 
+            If VertechCoin is worth $0.50, the token part equals $50,000. <br>
+            If at closing VertechCoin rises to $0.75, those 100,000 VertechCoin would equal $75,000.  
+            <strong>Excess = $25,000</strong>
+          </p>
+        </div>
+      </div>
+  
+      <!-- Boxes -->
+      <div class="row g-4">
+        <!-- Pro-rata -->
+        <div class="col-md-4">
+          <div class="excess-box text-center animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+            <div class="icon-wrap-large">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <hr class="divider">
+            <h4>Pro-rata</h4>
+            <p>The amount of VertechCoin accepted is reduced to meet exactly the target.</p>
+            <p class="result"><strong>Result:</strong> You receive exactly what was planned, return the excess.</p>
+          </div>
+        </div>
+        <!-- Cap + Redistribution -->
+        <div class="col-md-4">
+          <div class="excess-box text-center animate-on-scroll animate__animated" data-animation="animate__fadeInDown">
+            <div class="icon-wrap-large">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <hr class="divider">
+            <h4>Cap + Redistribution</h4>
+            <p>A +20% cap is respected. The excess is redistributed according to agreed policy.</p>
+            <p class="result"><strong>Result:</strong> More runway for marketing and development.</p>
+          </div>
+        </div>
+        <!-- Cap + Perks -->
+        <div class="col-md-4">
+          <div class="excess-box text-center animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+            <div class="icon-wrap-large">
+              <i class="fas fa-gift"></i>
+            </div>
+            <hr class="divider">
+            <h4>Cap + Perks</h4>
+            <p>What exceeds the cap is converted into extra perks/benefits for investors.</p>
+            <p class="result"><strong>Result:</strong> Greater value for the investor community.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <section class="steps-section py-5" id="process">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        
+        <!-- LEFT: Steps -->
+        <div class="col-lg-6 animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+          <h3 class="section-titles">Your round in 6 steps</h3>
+          <div class="steps-timeline">
+            
+            <!-- Step 1 -->
+            <div class="step-item">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <div class="step-header">
+                  <span class="step-title">Registration and verification</span>
+                  <span class="step-time">2-5 days</span>
+                </div>
+                <p>Verify your identity and company according to your jurisdiction.</p>
+              </div>
+            </div>
+  
+            <!-- Step 2 -->
+            <div class="step-item">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <div class="step-header">
+                  <span class="step-title">Submit project</span>
+                  <span class="step-time">3-7 days</span>
+                </div>
+                <p>Prepare your pitch deck and submit for approval.</p>
+              </div>
+            </div>
+  
+            <!-- Step 3 -->
+            <div class="step-item">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <div class="step-header">
+                  <span class="step-title">Approval process</span>
+                  <span class="step-time">3-7 days</span>
+                </div>
+                <p>Your project is reviewed by our internal team.</p>
+              </div>
+            </div>
+  
+            <!-- Step 4 -->
+            <div class="step-item">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <div class="step-header">
+                  <span class="step-title">Listing on platform</span>
+                  <span class="step-time">1-3 days</span>
+                </div>
+                <p>Once approved, your project goes live on the platform.</p>
+              </div>
+            </div>
+  
+            <!-- Step 5 -->
+            <div class="step-item">
+              <div class="step-number">5</div>
+              <div class="step-content">
+                <div class="step-header">
+                  <span class="step-title">Fundraising period</span>
+                  <span class="step-time">Flexible</span>
+                </div>
+                <p>Investors can fund your project during the live round.</p>
+              </div>
+            </div>
+  
+            <!-- Step 6 -->
+            <div class="step-item">
+              <div class="step-number">6</div>
+              <div class="step-content">
+                <div class="step-header">
+                  <span class="step-title">Funds transfer</span>
+                  <span class="step-time">2-5 days</span>
+                </div>
+                <p>Receive your funds securely once the round ends successfully.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- RIGHT: Requirements -->
+        <div class="col-lg-6 animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+          <h3 class="section-titles">Minimum Requirements</h3>
+          
+          <!-- Box 1 -->
+          <div class="glass-box mb-4">
+            <h5 class="req-heading">
+              <i class="fas fa-file-alt"></i> Basic Documentation
+            </h5>
+            <ul class="checklist">
+              <li><span class="icon-wrap"><i class="fas fa-file"></i></span> Pitch deck (max 15 slides)</li>
+              <li><span class="icon-wrap"><i class="fas fa-chart-line"></i></span> Basic financial plan</li>
+              <li><span class="icon-wrap"><i class="fas fa-building"></i></span> Company incorporation</li>
+              <li><span class="icon-wrap"><i class="fas fa-users"></i></span> Team identification</li>
+            </ul>
+          </div>
+  
+          <!-- Box 2 -->
+          <div class="glass-box">
+            <h5 class="req-heading alt">
+              <i class="fas fa-clipboard-check"></i> Project Criteria
+            </h5>
+            <ul class="checklist">
+              <li><span class="icon-wrap"><i class="fas fa-dollar-sign"></i></span> Minimum goal: $5,000</li>
+              <li><span class="icon-wrap"><i class="fab fa-linkedin"></i></span> Team with verified LinkedIn</li>
+              <li><span class="icon-wrap"><i class="fas fa-coins"></i></span> Detailed use of funds</li>
+              <li><span class="icon-wrap"><i class="fas fa-exclamation-triangle"></i></span> Honest risk analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+    <!-- Bottom CTA -->
+<div class="cta-box text-center mt-5 p-3 rounded-4">
+  
+    <!-- Image above heading -->
+    <img src="/images/gradient-element4.png" alt="Launch Icon" class="cta-icon mb-2 mx-auto d-block">
+  
+    <!-- Heading inside pill -->
+    <div class="cta-heading-pill mx-auto mb-3">
+      <h4 class="fw-bold mb-0">Ready to launch?</h4>
+    </div>
+  
+    <p class="mb-4">Join entrepreneurs already funding with VertechCoin's hybrid model.</p>
+  
+    <!-- Buttons -->
+    <div class="cta-buttons d-flex justify-content-center gap-3 flex-wrap">
+      <a href="#" class="btn btn-primary btn-lg">Submit Your Project</a>
+      <a href="projects.html" class="btn btn-outline-light btn-lg">View Examples</a>
+    </div>
+  
+    <small class="d-block mt-3 text-white">
+      Approval process in 3-7 days. 5% fee only if your round succeeds.
+    </small>
+  </div>
+  
+    </div>
+  </section>
+  
+  
+
+
+
+
+
+
+
+  <!--Modern Footer -->
+<!--Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row gy-4">
+      
+      <!-- Brand Info -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h3 class="footer-logo">VertechCoin</h3>
+          <p class="footer-desc flex-grow-1">
+            Where entrepreneurs and investors meet. Fuel innovation with smart funding solutions powered by VertechCoin.
+          </p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-medium-m"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links flex-grow-1">
+            <li><a href="whitepaper.html">Whitepaper</a></li>
+            <li><a href="projectnew.html">Projects</a></li>
+            <li><a href="invest.html">Investors</a></li>
+            <li><a href="token.html">Tokenomics</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Legal -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h5 class="footer-heading">Legal</h5>
+          <ul class="footer-links flex-grow-1">
+            <li><a href="/public/Privacy_Policy.pdf" target="_blank">Privacy Policy</a></li>
+            <li><a href="/public/Terms_of_Service.pdf" target="_blank">Terms of Service</a></li>
+            <li><a href="/public/Risk_Disclosure.pdf" target="_blank">Risk Disclosure</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Subscribe -->
+      <!-- <div class="col-lg-3 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column text-center">
+          <h5 class="footer-heading">Stay Updated</h5>
+          <p class="footer-desc flex-grow-1">
+            Get the latest updates on VertechCoin and new project launches
+          </p>
+          <form class="subscribe-form d-flex">
+            <input type="email" class="form-control" placeholder="Enter your email">
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </form>
+        </div>
+      </div> -->
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom text-center mt-5">
+      <p>© 2025 VertechCoin. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ <!-- Animation Script-->
+  <script>
+        // Function to handle the intersection of the target elements
+        function handleIntersection(entries, observer) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const targetElement = entry.target;
+                    const animationClass = targetElement.dataset.animation;
+
+                    if (animationClass) {
+                        targetElement.classList.add(animationClass);
+                        // Remove the animate-on-scroll class to prevent animation on subsequent scrolls
+                        targetElement.classList.remove('animate-on-scroll');
+                    }
+                }
+            });
+        }
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0,
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, options);
+
+        // Observe all elements with the "animate-on-scroll" class
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+
+
+<script>
+  // Run after page loads
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop(); 
+    const navLinks = document.querySelectorAll(".custom-navbar .nav-link");
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
+<script>
+  function openForm() {
+    document.getElementById("pitchModal").style.display = "flex";
+  }
+  function closeForm() {
+    document.getElementById("pitchModal").style.display = "none";
+  }
+  // Close when clicking outside modal content
+  window.onclick = function(event) {
+    const modal = document.getElementById("pitchModal");
+    if (event.target === modal) {
+      closeForm();
+    }
+  }
+  
+  
+  
+  
+  
+  document.getElementById("pitchForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  
+  const form = e.target;
+  const formData = new FormData(form);
+  
+  
+  
+  const file = formData.get("pitchDeck");
+  if (file && file.size > 10 * 1024 * 1024) {
+  alert("File must be under 10MB");
+  return;
+  }
+  
+  
+  
+  
+  try {
+  // const res = await fetch("http://localhost:5000/api/projects/add", {
+  const res = await fetch("https://vcoin-backend.onrender.com/api/projects/add", {
+  method: "POST",
+  body: formData
+  });
+  
+  if (res.ok) {
+  alert(" Project submitted successfully!");
+  form.reset();
+  closeForm();
+  } else {
+  const error = await res.json();
+  alert(" Submission failed: " + (error.error || "Unknown error"));
+  }
+  } catch (err) {
+  alert(" Submission failed: " + err.message);
+  }
+  });
+  
+  
+  
+  
+  
+  </script>
+  
+
+
+</body>
+</html>

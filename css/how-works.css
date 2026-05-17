@@ -1,0 +1,200 @@
+body{
+    background-color: #000;
+}
+.how-it-works {
+  background-image: url("/images/howitworksbg.png") !important;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.how-it-works .section-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  color: #d1d1d1;
+  margin-bottom: 2rem;
+}
+
+/* Flip Card */
+.magic-card {
+  perspective: 1000px;
+  width: 280px;
+  height: 320px;
+  margin: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Modern Glassmorphism */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  
+  /* Gradient border effect (Gold) */
+  border: 1px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  background-image: 
+    linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0)),
+    linear-gradient(135deg, rgba(255, 237, 0, 0.7), rgba(160, 120, 0, 0.6));
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.magic-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Optional Glass Badge */
+.badge-glass {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: 0.8rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 12px;
+  color: #000000;
+}
+
+/* Arrow Button */
+.arrow-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 237, 0, 0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFED00;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 237, 0, 0.3);
+}
+
+.arrow-btn:hover {
+  background: rgba(255, 237, 0, 0.2);
+  box-shadow: 0 0 12px rgba(255, 237, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.circle-thread {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 237, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  box-shadow: 0 0 10px rgba(255, 237, 0, 0.4);
+}
+
+.step-text {
+  color: #fff;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  padding: 0 0.5rem;
+}
+
+/* Step Image */
+.step-img {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  margin: 1rem auto;
+  display: block;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.step-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px rgba(255, 237, 0, 0.7));
+}
+
+/* Title Highlight */
+.section-title {
+  background: linear-gradient(135deg, #FFED00, #b49e00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Badge Glow (optional) */
+.badge-glass {
+  box-shadow: 0 0 10px rgba(255, 237, 0, 0.3);
+}
+
+
+
+
+
+.cta-buttons .btn {
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Primary Button - Yellow Theme */
+.cta-buttons .btn-primary {
+  background: linear-gradient(135deg, #ffd84d, #ffb800);
+  border: none;
+  box-shadow: 0 0 15px rgba(255, 216, 77, 0.5);
+}
+
+.cta-buttons .btn-primary:hover {
+  background: linear-gradient(135deg, #ffea70, #ffc300);
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(255, 216, 77, 0.8);
+}
+
+/* Outline Light Button */
+.cta-buttons .btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.cta-buttons .btn-outline-light:hover {
+  background: #fff;
+  color: #ffb800;
+  transform: translateY(-3px);
+}

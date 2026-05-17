@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VertechCoincapital-Whitepaper</title>
+  <link rel="icon" type="image/png" href="images/new-logo-BuRQRJTO.png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/navbar.css">
+  
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/whitepaper.css">
+ 
+</head>
+<body style=" background: black; overflow-x: hidden;">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/new-logo-BuRQRJTO.png" alt="VertechCoin Logo" class="me-2" style="height: 55px;">
+        <span>VertechCoincapital</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1"></i>
+            Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="projectnew.html"><i class="fa-solid fa-diagram-project me-1"></i>
+              Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-works.html"><i class="fa-solid fa-lightbulb me-1"></i> How
+              it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="invest.html"><i class="fa-solid fa-users me-1"></i>
+              Investors</a></li>
+          <li class="nav-item"><a class="nav-link" href="entrepreneurs.html"><i class="fa-solid fa-briefcase me-1"></i>
+              Entrepreneurs</a></li>
+          <li class="nav-item"><a class="nav-link" href="token.html"><i class="fa-solid fa-coins me-1"></i> Tokenomics</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="whitepaper.html"><i class="fa-solid fa-file-lines me-1"></i>
+              Whitepaper</a></li>
+        </ul>
+      </div>
+      <div class="nav-buttons d-none d-lg-block">
+        <button class="btn glass-btn me-2" onclick="alert('Coming soon')"><i class="fa-solid fa-wallet me-1"></i> Buy Now</button>
+        <a href="projectnew.html"><button class="btn glass-btn"><i class="fa-solid fa-compass me-1"></i> Explore
+            Projects</button></a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+  <section class="whitepaper-section py-5">
+    <div class="container">
+  
+      <!-- Top Intro -->
+      <div class="text-center mb-5 glass-box intro-box p-5 animate-on-scroll animate__animated" data-animation="animate__fadeInDown">
+        <h2 class="whitepaper-title">VertechCoin Whitepaper</h2>
+        <p class="whitepaper-subtitle">The future of hybrid financing: connecting investors and entrepreneurs through a decentralized and transparent ecosystem.</p>
+        <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
+          <a href="#" class="btn btn-primary btn-lg">Download PDF <i class="fas fa-download"></i></a>
+          <a href="#" class="btn btn-outline-light btn-lg">Read Online <i class="fas fa-book-open"></i></a>
+        </div>
+      </div>
+  
+      <div class="row">
+  
+        <!-- LEFT: Table of Contents -->
+        <div class="col-lg-3 sticky-top">
+          <div class="toc-box animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+            <h5 class="toc-title"><i class="fas fa-list-ul"></i> Table of Contents</h5>
+            <ul class="toc-list list-unstyled">
+              <li><a href="#executive-summary" class="toc-link"><i class="fas fa-file-alt"></i> Executive Summary</a></li>
+              <li><a href="#vision-mission" class="toc-link"><i class="fas fa-eye"></i> Vision & Mission</a></li>
+              <li><a href="#problem-solve" class="toc-link"><i class="fas fa-exclamation-circle"></i> Problem We Solve</a></li>
+              <li><a href="#vcoin-solution" class="toc-link"><i class="fas fa-lightbulb"></i> The VertechCoin Solution</a></li>
+              <li><a href="#tokenomics" class="toc-link"><i class="fas fa-coins"></i> Tokenomics</a></li>
+              <li><a href="#token-utility" class="toc-link"><i class="fas fa-cogs"></i> Token Utility</a></li>
+              <!-- <li><a href="#technology" class="toc-link"><i class="fas fa-microchip"></i> Technology</a></li>
+              <li><a href="#market-analysis" class="toc-link"><i class="fas fa-chart-line"></i> Market Analysis</a></li> -->
+              <li><a href="#roadmap" class="toc-link"><i class="fas fa-map"></i> Roadmap</a></li>
+            </ul>
+          </div>
+        </div>
+        
+  
+        <!-- RIGHT: Section Details -->
+        <div class="col-lg-8">
+  
+       <div class="content-wrapper">
+           <!-- Executive Summary -->
+           <div id="executive-summary" class="whitepaper-section-detail mb-5 mt-3 glass-card animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+            <div class="section-floating-number">01</div>
+            <h3 class="section-heading"><i class="fas fa-file-alt"></i> Executive Summary</h3>
+            <p>VertechCoin represents a revolution in how business innovation is financed. Our token connects global capital with entrepreneurial talent through a hybrid financing model that combines traditional cash with utility tokens.</p>
+            <p>In an ecosystem where investors seek diversified opportunities and entrepreneurs need accessible capital, VertechCoin acts as the bridge that makes this connection possible in a transparent, efficient way aligned with the incentives of the entire community.</p>
+  
+            <div class="d-flex flex-wrap gap-4 mt-4">
+              <div class="token-card-square">
+                <i class="fas fa-coins fa-2x mb-2"></i>
+                <span class="token-label">Max Supply</span>
+                <h3>100M</h3>
+              </div>
+              <div class="token-card-square">
+                <i class="fas fa-network-wired fa-2x mb-2"></i>
+                <span class="token-label">Blockchain</span>
+                <h3>Base L2</h3>
+              </div>
+              <div class="token-card-square">
+                <i class="fas fa-euro-sign fa-2x mb-2"></i>
+                <span class="token-label">Initial Price</span>
+                <h3>€0.10</h3>
+              </div>
+            </div>
+          </div>
+  
+ <!-- Vision & Mission -->
+<div id="vision-mission" class="whitepaper-section-detail mb-5 glass-card position-relative animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+    <div class="section-floating-number">02</div>
+    <h3 class="section-heading"><i class="fas fa-eye"></i> Vision & Mission</h3>
+  
+    <div class="vision-mission-wrapper position-relative d-flex flex-wrap gap-4 mt-4">
+  
+   
+  
+      <!-- Vision Card -->
+      <div class="vision-mission-card animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+        <div class="vm-bg-gradient"></div>
+        <div class="vm-icon"><i class="fas fa-globe"></i></div>
+        <h5 class="vm-title">Our Vision</h5>
+        <p>To create the world's most transparent and efficient financial ecosystem, where any entrepreneur with a valuable idea can access the necessary capital and any investor can participate in the future of innovation.</p>
+      </div>
+  
+      <!-- Mission Card -->
+      <div class="vision-mission-card animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+        <div class="vm-bg-gradient"></div>
+        <div class="vm-icon"><i class="fas fa-rocket"></i></div>
+        <h5 class="vm-title">Our Mission</h5>
+        <p>To democratize access to venture capital through blockchain technology, eliminating geographical and bureaucratic barriers, while creating a financing model that aligns the incentives of investors and entrepreneurs in the long term.</p>
+      </div>
+  
+    </div>
+  </div>
+  
+  
+  
+<!-- Problem We Solve -->
+<div id="problem-solve" class="whitepaper-section-detail mb-5 glass-card animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+    <div class="section-floating-number">03</div>
+    <h3 class="section-heading text-center"><i class="fas fa-exclamation-circle"></i> Problem We Solve</h3>
+
+    <div class="d-flex flex-wrap gap-4 mt-4 justify-content-center">
+        <!-- Entrepreneurs -->
+        <div class="problem-card flex-fill">
+            <div class="pc-icon-pill"><i class="fas fa-user-tie"></i></div>
+            <h5 class="pc-title">For Entrepreneurs</h5>
+            <ul class="pc-list">
+                <li>Limited access to venture capital</li>
+                <li>Long and bureaucratic processes</li>
+                <li>Lack of transparency in evaluation</li>
+                <li>Geographic concentration of capital</li>
+            </ul>
+        </div>
+
+        <!-- Investors -->
+        <div class="problem-card flex-fill">
+            <div class="pc-icon-pill"><i class="fas fa-chart-pie"></i></div>
+            <h5 class="pc-title">For Investors</h5>
+            <ul class="pc-list">
+                <li>High entry barriers (minimum tickets)</li>
+                <li>Lack of accessible diversification</li>
+                <li>Asymmetric information</li>
+                <li>Expensive due diligence processes</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- VertechCoin Solution -->
+<div id="vcoin-solution" class="whitepaper-section-detail mb-5 glass-card animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+    <div class="section-floating-number">04</div>
+    <h3 class="section-heading text-center"><i class="fas fa-lightbulb"></i> The VertechCoin Solution</h3>
+    <p class="section-intro text-center">
+      VertechCoin introduces a revolutionary hybrid financing model that combines the best of traditional and decentralized finance:
+    </p>
+  
+    <div class="d-flex flex-wrap gap-4 mt-4 justify-content-center">
+  
+      <!-- Hybrid Financing -->
+      <div class="solution-card flex-fill">
+        <div class="sc-icon"><i class="fas fa-coins"></i></div>
+        <h5 class="sc-title">Hybrid Financing</h5>
+        <p class="sc-text">Projects can set goals in both cash (€) and VertechCoin, allowing multiple forms of participation and creating a more flexible ecosystem.</p>
+      </div>
+  
+      <!-- Transparency -->
+      <div class="solution-card flex-fill">
+        <div class="sc-icon"><i class="fas fa-balance-scale"></i></div>
+        <h5 class="sc-title">Total Transparency</h5>
+        <p class="sc-text">All transactions, overflow rules and allocations are visible on-chain, eliminating the traditional opacity of venture capital.</p>
+      </div>
+  
+      <!-- Aligned Community -->
+      <div class="solution-card flex-fill">
+        <div class="sc-icon"><i class="fas fa-users"></i></div>
+        <h5 class="sc-title">Aligned Community</h5>
+        <p class="sc-text">VertechCoin holders become active participants in the ecosystem, with voting rights on key decisions and preferential access to new projects.</p>
+      </div>
+  
+      <!-- Global Access -->
+      <div class="solution-card flex-fill">
+        <div class="sc-icon"><i class="fas fa-globe"></i></div>
+        <h5 class="sc-title">Global Access</h5>
+        <p class="sc-text">Without geographical restrictions, anyone in the world can participate as an investor or entrepreneur, democratizing access to capital.</p>
+      </div>
+  
+    </div>
+  </div>
+  
+
+
+
+
+<!-- Tokenomics Section -->
+<div id="tokenomics" class="whitepaper-section-detail mb-5 glass-card animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+    <div class="section-floating-number">05</div>
+    <h3 class="section-heading text-center"><i class="fas fa-chart-bar"></i> Tokenomics</h3>
+  
+    <!-- Token Specifications Row -->
+    <div class="d-flex flex-wrap justify-content-center gap-4 mt-4 token-specs-row">
+      <div class="spec-card">
+        <h6><i class="fas fa-coins"></i> Ticker</h6>
+        <p>VertechCoin</p>
+      </div>
+      <div class="spec-card">
+        <h6><i class="fas fa-network-wired"></i> Blockchain</h6>
+        <p>Base (L2 Ethereum)</p>
+      </div>
+      <div class="spec-card">
+        <h6><i class="fas fa-cubes"></i> Total Supply</h6>
+        <p>100,000,000 VertechCoin</p>
+      </div>
+      <div class="spec-card">
+        <h6><i class="fas fa-euro-sign"></i> Initial Price</h6>
+        <p>€0.10</p>
+      </div>
+    </div>
+  
+    <!-- Tokenomics Distribution Layout -->
+    <div class="row align-items-stretch mt-5 animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+      <!-- Left Distribution Box -->
+      <div class="col-md-6">
+        <div class="distribution-box">
+          <h5><i class="fas fa-sitemap"></i> Token Distribution</h5>
+          <ul class="distribution-list">
+            <li><span>Ecosystem & Incentives</span><span class="percent">40%</span></li>
+            <li><span>Treasury/DAO</span><span class="percent">20%</span></li>
+            <li><span>Team</span><span class="percent">15%</span></li>
+            <li><span>Liquidity</span><span class="percent">10%</span></li>
+            <li><span>Reserve</span><span class="percent">10%</span></li>
+            <li><span>Advisors</span><span class="percent">5%</span></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Right Chart (placeholder, you’ll add chart here) -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <div class="chart-placeholder">
+            <img src="images/tokenomics-chart.png" alt="Tokenomics Chart">
+          </div>
+          
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- Token Utility Section -->
+<div id="token-utility" class="whitepaper-section-detail mb-5 glass-card animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+    <div class="section-floating-number">06</div>
+    <h3 class="section-heading text-center"><i class="fas fa-coins"></i> Token Utility</h3>
+    <p class="text-center section-subheading">
+      The VertechCoin token is at the heart of the ecosystem, powering investments, governance, and access.
+    </p>
+  
+    <!-- Token Utility Cards Layout -->
+    <div class="row mt-5 g-4 justify-content-center animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+      <!-- Investment Medium -->
+      <div class="col-md-6">
+        <div class="utility-card">
+          <div class="utility-icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <h5>Investment Medium</h5>
+          <p>VertechCoin serves as the native currency to invest in projects listed on the platform, creating a closed and sustainable economic cycle.</p>
+        </div>
+      </div>
+  
+      <!-- Tier Access -->
+      <div class="col-md-6 animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+        <div class="utility-card">
+          <div class="utility-icon"><i class="fas fa-layer-group"></i></div>
+          <h5>Tier Access</h5>
+          <p>Holders get early access, better ticket limits and exclusive perks based on the amount of VertechCoin they own.</p>
+        </div>
+      </div>
+  
+      <!-- Governance -->
+      <div class="col-md-6 animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+        <div class="utility-card">
+          <div class="utility-icon"><i class="fas fa-vote-yea"></i></div>
+          <h5>Governance</h5>
+          <p>Voting rights on key decisions: which verticals to prioritize, matching pool usage and featured projects on the platform.</p>
+        </div>
+      </div>
+  
+      <!-- Staking -->
+      <div class="col-md-6 animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+        <div class="utility-card">
+          <div class="utility-icon"><i class="fas fa-lock"></i></div>
+          <h5>Staking</h5>
+          <p>Optional staking functionality that grants allocation priority in projects with high demand and reduced liquidity.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+
+  <!-- Roadmap Section -->
+<div id="roadmap" class="whitepaper-section-detail mb-5 glass-card">
+    <div class="section-floating-number">07</div>
+    <h3 class="section-heading text-center"><i class="fas fa-route"></i> Roadmap</h3>
+    <p class="text-center section-subheading">Our journey to building the future of decentralized venture capital</p>
+  
+    <!-- Roadmap Timeline -->
+    <div class="roadmap-timeline mt-5">
+  
+      <!-- Q4 2024 -->
+      <div class="roadmap-step">
+        <div class="roadmap-circle"><i class="fas fa-rocket"></i></div>
+        <div class="roadmap-content animate-on-scroll animate__animated" data-animation="animate__fadeInDown">
+          <h5 class="roadmap-pill">Q4 2024</h5>
+          <h6>MVP Launch</h6>
+          <ul>
+            <li>Landing page</li>
+            <li>Project marketplace</li>
+            <li>Demo investment system</li>
+            <li>Basic KYC</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Q1 2025 -->
+      <div class="roadmap-step">
+        <div class="roadmap-circle"><i class="fas fa-coins"></i></div>
+        <div class="roadmap-content animate-on-scroll animate__animated" data-animation="animate__fadeInDown">
+          <h5 class="roadmap-pill">Q1 2025</h5>
+          <h6>Token & DeFi</h6>
+          <ul>
+            <li>VertechCoin launch</li>
+            <li>Fiat on-ramp</li>
+            <li>Basic staking</li>
+            <li>Initial governance</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Q2 2025 -->
+      <div class="roadmap-step">
+        <div class="roadmap-circle"><i class="fas fa-chart-line"></i></div>
+        <div class="roadmap-content animate-on-scroll animate__animated" data-animation="animate__fadeInDown">
+          <h5 class="roadmap-pill">Q2 2025</h5>
+          <h6>Expansion</h6>
+          <ul>
+            <li>Smart contract audit</li>
+            <li>Mobile app</li>
+            <li>Strategic partnerships</li>
+          </ul>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+       </div>
+    
+  
+  
+  
+
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Modern Footer -->
+<!--Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row gy-4">
+      
+      <!-- Brand Info -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h3 class="footer-logo">VertechCoin</h3>
+          <p class="footer-desc flex-grow-1">
+            Where entrepreneurs and investors meet. Fuel innovation with smart funding solutions powered by VertechCoin.
+          </p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-medium-m"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links flex-grow-1">
+            <li><a href="whitepaper.html">Whitepaper</a></li>
+            <li><a href="projectnew.html">Projects</a></li>
+            <li><a href="invest.html">Investors</a></li>
+            <li><a href="token.html">Tokenomics</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Legal -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h5 class="footer-heading">Legal</h5>
+          <ul class="footer-links flex-grow-1">
+            <li><a href="/public/Privacy_Policy.pdf" target="_blank">Privacy Policy</a></li>
+            <li><a href="/public/Terms_of_Service.pdf" target="_blank">Terms of Service</a></li>
+            <li><a href="/public/Risk_Disclosure.pdf" target="_blank">Risk Disclosure</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Subscribe -->
+      <!-- <div class="col-lg-3 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column text-center">
+          <h5 class="footer-heading">Stay Updated</h5>
+          <p class="footer-desc flex-grow-1">
+            Get the latest updates on VertechCoin and new project launches
+          </p>
+          <form class="subscribe-form d-flex">
+            <input type="email" class="form-control" placeholder="Enter your email">
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </form>
+        </div>
+      </div> -->
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom text-center mt-5">
+      <p>© 2025 VertechCoin. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script>
+    // Highlight TOC link while scrolling
+const sections = document.querySelectorAll('.whitepaper-section-detail');
+const tocLinks = document.querySelectorAll('.toc-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  tocLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+  </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ <!-- Animation Script-->
+  <script>
+        // Function to handle the intersection of the target elements
+        function handleIntersection(entries, observer) {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const targetElement = entry.target;
+                    const animationClass = targetElement.dataset.animation;
+
+                    if (animationClass) {
+                        targetElement.classList.add(animationClass);
+                        // Remove the animate-on-scroll class to prevent animation on subsequent scrolls
+                        targetElement.classList.remove('animate-on-scroll');
+                    }
+                }
+            });
+        }
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0,
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, options);
+
+        // Observe all elements with the "animate-on-scroll" class
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+
+<script>
+  // Run after page loads
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop(); 
+    const navLinks = document.querySelectorAll(".custom-navbar .nav-link");
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+</body>
+</html>

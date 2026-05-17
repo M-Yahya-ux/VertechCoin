@@ -1,0 +1,30 @@
+.dashboard-card {
+    display: block;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 60px 30px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .dashboard-card:hover {
+    transform: translateY(-8px);
+    border-color: #b388ff;
+  }
+  
+  .dashboard-card h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #b388ff;
+  }
+  
+  .dashboard-card p {
+    color: #ccc;
+    margin: 0;
+  }
+  

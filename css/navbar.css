@@ -1,0 +1,87 @@
+body, .custom-navbar, .glass-btn {
+  font-family: 'Outfit', sans-serif !important;
+  }
+
+/* Navbar Styles */
+.custom-navbar {
+    /* background: linear-gradient(90deg, rgba(20,0,40,0.95) 0%, rgba(90,0,120,0.95) 100%); */
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+    padding: 0.2rem 1.5rem;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.281);
+  }
+  
+  /* Brand */
+  .custom-navbar .navbar-brand {
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.25rem;
+    white-space: nowrap;
+    letter-spacing: 0.4px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-navbar .navbar-brand img {
+    height: 36px;
+    margin-right: 8px;
+  }
+  
+  /* Nav Items */
+  .custom-navbar .nav-link {
+    color: #e0e0e0;
+    margin: 0 6px; /* reduced gap */
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: #ffd54f; /* soft yellow hover */
+}
+
+/* Active link */
+.custom-navbar .nav-link.active {
+  color: #ffeb3b; /* bright yellow for active link */
+  font-weight: 600;
+  border-bottom: 2px solid #ffc107; /* warm golden border */
+  padding-bottom: 2px;
+}
+
+  /* Buttons - Improved (Yellow Theme) */
+.glass-btn {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.25));
+  border: 1px solid rgba(255, 215, 0, 0.35); /* gold border */
+  color: #fff;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.glass-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 235, 59, 0.35), rgba(255, 193, 7, 0.4)); /* bright warm yellow */
+  border-color: rgba(255, 215, 0, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  color: white !important;
+}
+
+  
+  .nav-buttons {
+    display: flex;
+    gap: 10px; /* tighter spacing between buttons */
+    flex-shrink: 0;
+  }
+  
+
+  

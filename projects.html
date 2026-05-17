@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VertechCoincapital-Projects</title>
+  <link rel="icon" type="image/png" href="images/new-logo-BuRQRJTO.png">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+  <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body style="overflow-x: hidden;    font-family: 'Outfit', sans-serif !important;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/new-logo-BuRQRJTO.png" alt="VertechCoin Logo" class="me-2" style="height: 55px;">
+        <span>VertechCoincapital</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1"></i>
+            Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="projectnew.html"><i class="fa-solid fa-diagram-project me-1"></i>
+              Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-works.html"><i class="fa-solid fa-lightbulb me-1"></i> How
+              it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="invest.html"><i class="fa-solid fa-users me-1"></i>
+              Investors</a></li>
+          <li class="nav-item"><a class="nav-link" href="entrepreneurs.html"><i class="fa-solid fa-briefcase me-1"></i>
+              Entrepreneurs</a></li>
+          <li class="nav-item"><a class="nav-link" href="token.html"><i class="fa-solid fa-coins me-1"></i> Tokenomics</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="whitepaper.html"><i class="fa-solid fa-file-lines me-1"></i>
+              Whitepaper</a></li>
+        </ul>
+      </div>
+      <div class="nav-buttons d-none d-lg-block">
+        <button class="btn glass-btn me-2" onclick="alert('Coming soon')"><i class="fa-solid fa-wallet me-1"></i> Buy Now</button>
+        <a href="projects.html"><button class="btn glass-btn"><i class="fa-solid fa-compass me-1"></i> Explore
+            Projects</button></a>
+      </div>
+    </div>
+  </nav>
+
+
+    <!-- Projects Section -->
+  <section id="projects" class="projects-section mt-5 py-5">
+    <div class="container">
+      <!-- Heading -->
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-white">Projects ready for your next move</h2>
+        <p class="text-white">Hybrid tickets, clear metrics and verified documentation.</p>
+      </div>
+
+     <!-- Filters Row -->
+<div class="row">
+  <div class="col-md-10 mx-auto">
+    <div class="d-flex justify-content-center align-items-center flex-row gap-2 px-2">
+      
+      <!-- Centered Search (flex-grow keeps it in center with fixed width) -->
+      <div class="flex-grow-1 d-flex justify-content-center align-items-center gap-2 search-input pe-1">
+        <input type="text" class="form-control search-input1" placeholder="Search projects...">
+          <i
+          class="fas fa-search fs-5"
+          style=" color: #aaa; cursor: pointer; transition: color 0.3s;"
+          onmouseover="this.style.color='#00bcd4'"
+          onmouseout="this.style.color='#aaa'"
+        ></i>
+      </div>
+    
+
+    </div>
+  </div>
+</div>
+
+<!-- Projects Cards -->
+<!-- <div class="row mt-5 gx-4" id="projectsList">
+
+
+  <div class="col-md-4 mb-4 project-card" data-category="SaaS" data-stage="MVP">
+    <div class="card glass-card p-3 h-100">
+
+  
+      <div class="card-header-section">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="badge">SaaS</span>
+          <span class="status-badge status-coming">
+            <span class="status-dot"></span> Closing Soon
+          </span>
+        </div>
+        <h5 class="fw-bold card-t">PayLink SaaS</h5>
+       <p class="text-white mb-2 d-flex align-items-center gap-2">
+
+      <span class="glass-icon">
+        <i class="fas fa-map-marker-alt"></i>
+      </span>
+        Spain • MVP
+      </p>
+        <p class="small1 text-white">Payment platform for small businesses with WhatsApp integration and automatic invoicing.</p>
+      </div>
+
+ 
+          <div class="card-funding-section">
+        <div class="d-flex justify-content-between fw-bold">
+          <div class="d-flex align-items-center gap-2">
+          <span class="glass-icon1">
+            <i class="fas fa-bullseye"></i>
+          </span>
+            <span style="color: rgb(21, 208, 21);">Goal:</span>
+          </div>
+           <span>€40,000.00 + 80,000 VertechCoin</span>
+      </div>
+      </div>
+
+  
+
+      <div class="card-ticket-section">
+  <div class="d-flex justify-content-between">
+    <div>
+      <div class="d-flex align-items-center gap-2 mb-1">
+        <span class="glass-icon1">
+          <i class="fas fa-ticket-alt"></i>
+        </span>
+        <p class="mb-0 fw-bold text-white">Minimum Ticket:</p>
+      </div>
+      <p class="small text-white">Excess rule:</p>
+    </div>
+    <div class="text-end">
+      <p class="mb-0 fw-bold text-white">€200.00 / 500 VertechCoin</p>
+            <p class="small text-white badge">Pro-rata</p>
+    </div>
+  </div>
+
+
+  <div class="circular-progress-wrapper text-center my-3">
+    <div class="circular-progress" data-progress="80">
+            <span class="circular-progress-value">80%</span>
+    </div>
+  </div>
+</div>
+
+    
+      <div class="text-center mt-auto">
+        <button class="view-btn">View Project</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="col-md-4 mb-4 project-card" data-category="Ecommerce" data-stage="Growth">
+    <div class="card glass-card p-3 h-100">
+
+     
+      <div class="card-header-section">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="badge">eCom</span>
+          <span class="status-badge status-online">
+            <span class="status-dot"></span> Open
+          </span>
+        </div>
+        <h5 class="fw-bold card-t">EcoShop Local</h5>
+       <p class="text-white mb-2 d-flex align-items-center gap-2">
+    
+      <span class="glass-icon">
+        <i class="fas fa-map-marker-alt"></i>
+      </span>
+        Spain • Growth
+      </p>
+        <p class="small1 text-white">Sustainable products marketplace with 24h delivery for Barcelona.</p>
+      </div>
+
+
+      <div class="card-funding-section">
+        <div class="d-flex justify-content-between fw-bold">
+  <div class="d-flex align-items-center gap-2">
+    <span class="glass-icon1">
+      <i class="fas fa-bullseye"></i>
+    </span>
+    <span style="color: rgb(21, 208, 21);">Goal:</span>
+  </div>
+  <span>€40,000.00 + 80,000 VertechCoin</span>
+</div>
+      </div>
+
+  
+      <div class="card-ticket-section">
+  <div class="d-flex justify-content-between">
+    <div>
+      <div class="d-flex align-items-center gap-2 mb-1">
+        <span class="glass-icon1">
+          <i class="fas fa-ticket-alt"></i>
+        </span>
+        <p class="mb-0 fw-bold text-white">Minimum Ticket:</p>
+      </div>
+      <p class="small text-white">Excess rule:</p>
+    </div>
+    <div class="text-end">
+      <p class="mb-0 fw-bold text-white">€100.00 / 250 VertechCoin</p>
+            <p class="small text-white badge">Perks</p>
+    </div>
+  </div>
+
+
+  <div class="circular-progress-wrapper text-center my-3">
+    <div class="circular-progress" data-progress="74">
+            <span class="circular-progress-value">74%</span>
+    </div>
+  </div>
+</div>
+
+
+   
+      <div class="text-center mt-auto">
+        <button class="view-btn">View Project</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-md-4 mb-4 project-card" data-category="Crypto" data-stage="Idea">
+    <div class="card glass-card p-3 h-100">
+
+      <div class="card-header-section">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="badge">Crypto</span>
+          <span class="status-badge status-online">
+            <span class="status-dot"></span> Open
+          </span>
+        </div>
+        <h5 class="fw-bold card-t">CryptoLearn</h5>
+       <p class="text-white mb-2 d-flex align-items-center gap-2">
+  
+      <span class="glass-icon">
+        <i class="fas fa-map-marker-alt"></i>
+      </span>
+        Mexico • Idea
+      </p>
+        <p class="small1 text-white">Online blockchain and DeFi academy with blockchain-verified certifications.</p>
+      </div>
+
+
+        <div class="card-funding-section">
+        <div class="d-flex justify-content-between fw-bold">
+          <div class="d-flex align-items-center gap-2">
+          <span class="glass-icon1">
+            <i class="fas fa-bullseye"></i>
+          </span>
+            <span style="color: rgb(21, 208, 21);">Goal:</span>
+          </div>
+          <span>€15,000.00 + 30,000 VertechCoin</span>
+      </div>
+      </div>
+
+
+ 
+      <div class="card-ticket-section">
+  <div class="d-flex justify-content-between">
+    <div>
+      <div class="d-flex align-items-center gap-2 mb-1">
+        <span class="glass-icon1">
+          <i class="fas fa-ticket-alt"></i>
+        </span>
+        <p class="mb-0 fw-bold text-white">Minimum Ticket:</p>
+      </div>
+      <p class="small text-white">Excess rule:</p>
+    </div>
+    <div class="text-end">
+      <p class="mb-0 fw-bold text-white">€50.00 / 125 VertechCoin</p>
+      <p class="small text-white badge">Cap</p>
+    </div>
+  </div>
+
+
+  <div class="circular-progress-wrapper text-center my-3">
+    <div class="circular-progress" data-progress="28">
+      <span class="circular-progress-value">28%</span>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="text-center mt-auto">
+        <button class="view-btn">View Project</button>
+      </div>
+
+    </div>
+  </div>
+
+</div> -->
+
+<!-- Projects Container -->
+<div class="row mt-5 gx-4 " id="projectsList"></div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <!-- Buttons -->
+<div class="btns-container text-center my-4">
+  <button class="btns_1 active" data-target="section1">Overview</button>
+  <button class="btns_1" data-target="section2">Team</button>
+  <button class="btns_1" data-target="section3">Funds</button>
+</div>
+
+<!-- Sections -->
+<div id="section1" class="toggle-section show">
+  <section class="  project-invest-section container my-5">
+    <div class="row align-items-start">
+      <!-- LEFT SIDE -->
+      <div class="col-lg-8">
+        <div class="project-box">
+  
+          <!-- Badges -->
+          <div class="project-badges d-flex flex-wrap gap-3 mb-3">
+            <span class="badge-pill"><i class="fas fa-cloud"></i> SaaS</span>
+            <span class="badge-pill"><i class="fas fa-rocket"></i> MVP</span>
+            <span class="badge-pill"><i class="fas fa-flag"></i> Spain</span>
+          </div>
+  
+          <!-- Project Title -->
+          <h2 class="project-title">PayLink SaaS</h2>
+          <p class="project-desc">
+            <i class="fas fa-comments-dollar"></i> Payment platform for small businesses with WhatsApp integration and automatic invoicing.
+          </p>
+  
+          <!-- PROGRESS BAR -->
+          <div class="progress-wrapper text-center my-4">
+            <div class="progress-circle">
+              <svg class="progress-ring" width="140" height="140">
+                <circle class="progress-ring__background" cx="70" cy="70" r="60" />
+                <circle class="progress-ring__progress" cx="70" cy="70" r="60" />
+              </svg>
+              <div class="progress-text">80%</div>
+            </div>
+          </div>
+  
+          <!-- Goal Cards -->
+          <div class="row g-3 justify-content-center">
+            <div class="col-md-4">
+              <div class="goal-card">
+                <i class="fas fa-coins"></i>
+                <h5>Cash Goal</h5>
+                <p>€40,000.00</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="goal-card">
+                <i class="fas fa-wallet"></i>
+                <h5>VertechCoin Goal</h5>
+                <p>80,000</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="goal-card">
+                <i class="fas fa-check-circle"></i>
+                <h5>Accepts Mix</h5>
+                <p>Yes</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Funding Progress -->
+          <div class="fund-progress mt-4">
+            <h5><i class="fas fa-chart-line"></i> 80% Funded</h5>
+            <p><strong>€32,000 + 64,000 VertechCoin</strong></p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- RIGHT SIDE -->
+      <div class="col-lg-4">
+        <div class="invest-box">
+          <h4><i class="fas fa-hand-holding-usd"></i> Invest Now</h4>
+          <p><strong>Minimum ticket:</strong> €200 / 500 VertechCoin</p>
+          <p><strong>Oversubscription rule:</strong> pro-rata</p>
+          <p><strong>Jurisdiction:</strong> Spain</p>
+  
+          <h5 class="mt-4"><i class="fas fa-gift"></i> Available Perks:</h5>
+          <ul>
+            <li><strong>Beta Access</strong> — Test before launch (From 500 VertechCoin)</li>
+            <li><strong>Consultation</strong> — 1 hour free (From 1000 VertechCoin)</li>
+          </ul>
+  
+          <div class="text-center">
+            <button class="invest-btn">Invest Now</button>
+          </div>
+          <p class="note">By clicking you accept the terms and conditions.<br><small>This is not financial advice.</small></p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-12">
+      <div class="vcoin-simulator-box mt-5">
+        <h3 class="simulator-title"><i class="fas fa-coins me-2"></i>VertechCoin Price Simulator</h3>
+        <p class="simulator-subtext">See how VertechCoin price variation affects project valuation</p>
+    
+        <div class="simulator-content mt-4">
+          <div class="simulator-info">
+            <p><strong>VertechCoin price variation:</strong> <span id="variation">-30%</span></p>
+            <input type="range" id="variationSlider" min="-30" max="30" step="5" value="-30">
+          </div>
+    
+          <div class="simulator-stats mt-4">
+            <div class="stat-card">
+              <i class="fas fa-euro-sign"></i>
+              <p>Current VertechCoin price</p>
+              <h4 id="coinPrice">€0.350</h4>
+            </div>
+    
+            <div class="stat-card">
+              <i class="fas fa-wallet"></i>
+              <p>VertechCoin value in EUR</p>
+              <h4 id="coinValue">€28,000</h4>
+            </div>
+          </div>
+    
+          <div id="surplusNote" class="surplus-note mt-4" style="display:none;">
+            <i class="fas fa-arrow-up me-2"></i>
+            <span>Surplus detected: <strong id="surplusAmount">€2,000</strong></span>
+          </div>
+    
+          <p class="rule-note mt-3"><i class="fas fa-balance-scale me-2"></i>Applied rule: <strong>pro-rata</strong></p>
+        </div>
+      </div>
+    </div>
+
+
+
+ <!-- Snackbar Navigation & Content -->
+<div class="col-12 mt-4">
+  <!-- Snackbar Navigation -->
+  <div class="snackbar-nav d-flex justify-content-center align-items-center flex-wrap gap-3 p-3 mb-4">
+    <button class="snackbar-btn active" data-target="overview">
+      <i class="fa-solid fa-chart-line me-2"></i> Overview
+    </button>
+    <button class="snackbar-btn" data-target="team">
+      <i class="fa-solid fa-users me-2"></i> Team
+    </button>
+    <button class="snackbar-btn" data-target="funds">
+      <i class="fa-solid fa-coins me-2"></i> Funds
+    </button>
+    <button class="snackbar-btn" data-target="documents">
+      <i class="fa-solid fa-file-lines me-2"></i> Docs
+    </button>
+    <button class="snackbar-btn" data-target="risks">
+      <i class="fa-solid fa-triangle-exclamation me-2"></i> Risks
+    </button>
+  </div>
+
+  <!-- Snackbar Content -->
+  <div class="snackbar-content">
+    
+    <!-- Overview -->
+    <div id="overview" class="snackbar-panel active">
+      <h4><i class="fa-solid fa-circle-info me-2"></i> Project Summary</h4>
+      <p class="mb-4">
+        Payment platform for small businesses with WhatsApp integration and automatic invoicing.
+      </p>
+      <div class="overview-stats d-flex justify-content-around flex-wrap gap-3">
+        <div class="stat-card">
+          <i class="fa-solid fa-chart-bar fa-2x mb-2"></i>
+          <h5>MRR</h5>
+          <p>€2,500</p>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-user-group fa-2x mb-2"></i>
+          <h5>Users</h5>
+          <p>150</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team -->
+    <div id="team" class="snackbar-panel">
+      <h4><i class="fa-solid fa-users me-2"></i> Team</h4>
+      <div class="team-members mt-3">
+        <div class="team-card">
+          <h5 class="text-black">Anna Garcia</h5>
+          <p class="text-black">CEO</p>
+          <a href="#" class="btn linkedin-btn">
+            <i class="fa-brands fa-linkedin me-1"></i> LinkedIn
+          </a>
+        </div>
+        <div class="team-card">
+          <h5 class="text-black">Charles Lopez</h5>
+          <p class="text-black">CTO</p>
+          <a href="#" class="btn linkedin-btn">
+            <i class="fa-brands fa-linkedin me-1"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Funds -->
+    <div id="funds" class="snackbar-panel">
+      <h4><i class="fa-solid fa-coins me-2"></i> Use of Funds</h4>
+      <ul class="funds-list mt-3">
+        <li>💻 70% Product Development</li>
+        <li>📣 20% Marketing</li>
+        <li>⚖️ 10% Legal</li>
+      </ul>
+    </div>
+
+    <!-- Documents -->
+    <div id="documents" class="snackbar-panel">
+      <h4><i class="fa-solid  fa-file-lines me-2"></i> Documents</h4>
+      <div class="document-list mt-3">
+        <div class="document-card">
+          <span class="text-black"><i class="fa-solid text-black fa-file-pdf me-2"></i> Pitch Deck</span>
+          <button class="btn download-btn"><i class="fa-solid fa-download me-1"></i> Download</button>
+        </div>
+        <div class="document-card">
+          <span class="text-black"><i class="fa-solid  text-black fa-file-invoice-dollar me-2"></i> Financial Plan</span>
+          <button class="btn  text-black download-btn"><i class="fa-solid fa-download me-1"></i> Download</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risks -->
+    <div id="risks" class="snackbar-panel">
+      <h4><i class="fa-solid fa-triangle-exclamation me-2"></i> Risks</h4>
+      <p>Competitive market risk, WhatsApp API dependency</p>
+      <div class="risk-warning mt-4 p-3">
+        ⚠️ <strong>Risk Warning:</strong> Investing involves risks. All capital may be lost.
+      </div>
+    </div>
+
+  </div>
+</div>    
+  </section>
+</div>
+
+<div id="section2" class="toggle-section">
+
+  <section class="  project-invest-section container my-5">
+    <div class="row align-items-start">
+  <!-- LEFT SIDE -->
+<div class="col-lg-8">
+  <div class="project-box">
+
+    <!-- Badges -->
+    <div class="project-badges d-flex flex-wrap gap-3 mb-3">
+      <span class="badge-pill"><i class="fas fa-shopping-bag"></i> eCom</span>
+      <span class="badge-pill"><i class="fas fa-chart-line"></i> Growth</span>
+      <span class="badge-pill"><i class="fas fa-flag"></i> Spain</span>
+    </div>
+
+    <!-- Project Title -->
+    <h2 class="project-title">EcoShop Local</h2>
+    <p class="project-desc">
+      <i class="fas fa-leaf"></i> Sustainable products marketplace with 24h delivery for Barcelona.
+    </p>
+
+    <!-- Circular Progress -->
+    <div class="progress-wrapper text-center my-4">
+      <div class="progress-circle">
+        <svg class="progress-ring" width="140" height="140">
+          <circle class="progress-ring__background" cx="70" cy="70" r="60" />
+          <circle class="progress-ring__progress" cx="70" cy="70" r="60" />
+        </svg>
+        <div class="progress-text">74%</div>
+      </div>
+    </div>
+
+    <!-- Goal Cards -->
+    <div class="row g-3 justify-content-center">
+      <div class="col-md-4">
+        <div class="goal-card">
+          <i class="fas fa-coins"></i>
+          <h5>Cash Goal</h5>
+          <p>€25,000.00</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="goal-card">
+          <i class="fas fa-wallet"></i>
+          <h5>VertechCoin Goal</h5>
+          <p>50,000</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="goal-card">
+          <i class="fas fa-check-circle"></i>
+          <h5>Accepts Mix</h5>
+          <p>Yes</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Funding Progress -->
+    <div class="fund-progress mt-4">
+      <h5><i class="fas fa-chart-line"></i> 74% Funded</h5>
+      <p><strong>€18,500 + 37,000 VertechCoin</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- RIGHT SIDE -->
+<div class="col-lg-4">
+  <div class="invest-box text-center">
+    <h4><i class="fas fa-hand-holding-usd"></i> Invest Now</h4>
+
+    <p><strong>Minimum ticket:</strong> €100 / 250 VertechCoin</p>
+    <p><strong>Oversubscription rule:</strong> perks</p>
+    <p><strong>Jurisdiction:</strong> Spain</p>
+
+    <h5 class="mt-4"><i class="fas fa-gift"></i> Available Perks:</h5>
+    <ul class="text-start d-inline-block">
+      <li>
+        <strong>10% Discount</strong> — Lifetime discount on all purchases<br>
+        <small>(From 250 VertechCoin)</small>
+      </li>
+      <li class="mt-2">
+        <strong>Eco Pack</strong> — Sustainable products pack worth €50<br>
+        <small>(From 500 VertechCoin)</small>
+      </li>
+    </ul>
+
+    <div class="text-center mt-4">
+      <button class="invest-btn">Invest Now</button>
+    </div>
+
+    <p class="note mt-3">
+      By clicking you accept the terms and conditions.<br>
+      <small>This is not financial advice.</small>
+    </p>
+  </div>
+</div>
+
+
+<div class="col-12">
+  <div class="vcoin-simulator-box mt-5">
+    <h3 class="simulator-title"><i class="fas fa-coins me-2"></i>VertechCoin Price Simulator</h3>
+    <p class="simulator-subtext">See how VertechCoin price variation affects project valuation</p>
+
+    <div class="simulator-content mt-4">
+      <div class="simulator-info">
+        <p><strong>VertechCoin price variation:</strong> <span id="variation2">-30%</span></p>
+        <input type="range" id="variationSlider2" min="-30" max="30" step="5" value="-30">
+      </div>
+
+      <div class="simulator-stats mt-4">
+        <div class="stat-card">
+          <i class="fas fa-euro-sign"></i>
+          <p>Current VertechCoin price</p>
+          <h4 id="coinPrice2">€0.350</h4>
+        </div>
+
+        <div class="stat-card">
+          <i class="fas fa-wallet"></i>
+          <p>VertechCoin value in EUR</p>
+          <h4 id="coinValue2">€28,000</h4>
+        </div>
+      </div>
+
+      <div id="surplusNote2" class="surplus-note mt-4" style="display:none;">
+        <i class="fas fa-arrow-up me-2"></i>
+        <span>Surplus detected: <strong id="surplusAmount2">€2,000</strong></span>
+      </div>
+
+      <p class="rule-note mt-3"><i class="fas fa-balance-scale me-2"></i>Applied rule: <strong>pro-rata</strong></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const slider2 = document.getElementById("variationSlider2");
+  const variationDisplay2 = document.getElementById("variation2");
+  const coinPrice2 = document.getElementById("coinPrice2");
+  const coinValue2 = document.getElementById("coinValue2");
+  const surplusNote2 = document.getElementById("surplusNote2");
+  const surplusAmount2 = document.getElementById("surplusAmount2");
+
+  let basePrice2 = 0.35;
+  let baseValue2 = 28000;
+
+  slider2.addEventListener("input", function() {
+    let variation = parseInt(this.value);
+    variationDisplay2.textContent = variation + "%";
+
+    // Smooth animation effect
+    variationDisplay2.style.transition = "all 0.3s ease";
+    this.style.transition = "all 0.4s ease-out";
+
+    // Update values smoothly (using 1250 instead of 2000)
+    let newPrice = basePrice2 + (variation * 0.025 / 5);
+    let newValue = baseValue2 + (variation * 1250 / 5);
+
+    coinPrice2.textContent = "€" + newPrice.toFixed(3);
+    coinValue2.textContent = "€" + newValue.toLocaleString();
+
+    if (variation > 0) {
+      surplusNote2.style.display = "flex";
+      surplusAmount2.textContent = "€" + (variation * 1250 / 5).toLocaleString();
+    } else {
+      surplusNote2.style.display = "none";
+    }
+  });
+</script>
+
+
+
+
+<!-- Snackbar Navigation & Content -->
+<div class="col-12 mt-4">
+  <!-- Snackbar Navigation -->
+  <div class="snackbar-nav2 d-flex justify-content-center align-items-center flex-wrap gap-3 p-3 mb-4">
+    <button class="snackbar-btn2 active" data-target="overview2">
+      <i class="fa-solid fa-chart-line me-2"></i> Overview
+    </button>
+    <button class="snackbar-btn2" data-target="team2">
+      <i class="fa-solid fa-users me-2"></i> Team
+    </button>
+    <button class="snackbar-btn2" data-target="funds2">
+      <i class="fa-solid fa-coins me-2"></i> Funds
+    </button>
+    <button class="snackbar-btn2" data-target="documents2">
+      <i class="fa-solid fa-file-lines me-2"></i> Docs
+    </button>
+    <button class="snackbar-btn2" data-target="risks2">
+      <i class="fa-solid fa-triangle-exclamation me-2"></i> Risks
+    </button>
+  </div>
+
+  <!-- Snackbar Content -->
+  <div class="snackbar-content2">
+
+    <!-- Overview -->
+    <div id="overview2" class="snackbar-panel2 active">
+      <h4><i class="fa-solid fa-circle-info me-2"></i> Project Summary</h4>
+      <p class="mb-4">
+        Sustainable products marketplace with 24h delivery for Barcelona.
+      </p>
+      <div class="overview-stats2 d-flex justify-content-around flex-wrap gap-3">
+        <div class="stat-card2">
+          <i class="fa-solid fa-chart-bar fa-2x mb-2"></i>
+          <h5>GMV</h5>
+          <p>€15,000</p>
+        </div>
+        <div class="stat-card2">
+          <i class="fa-solid fa-user-group fa-2x mb-2"></i>
+          <h5>Users</h5>
+          <p>800</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team -->
+    <div id="team2" class="snackbar-panel2">
+      <h4><i class="fa-solid fa-users me-2"></i> Team</h4>
+      <div class="team-members2 mt-3">
+        <div class="team-card2">
+          <h5 class="text-black">Maria Fernandez</h5>
+          <p class="text-black">Founder</p>
+          <a href="#" class="btn linkedin-btn2">
+            <i class="fa-brands fa-linkedin me-1"></i> LinkedIn
+          </a>
+        </div>
+        <div class="team-card2">
+          <h5 class="text-black">Peter Ruiz</h5>
+          <p class="text-black">Operations</p>
+          <a href="#" class="btn linkedin-btn2">
+            <i class="fa-brands fa-linkedin me-1"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Funds -->
+    <div id="funds2" class="snackbar-panel2">
+      <h4><i class="fa-solid fa-coins me-2"></i> Use of Funds</h4>
+      <ul class="funds-list2 mt-3">
+        <li>📦 50% Inventory</li>
+        <li>📣 30% Marketing</li>
+        <li>🚚 20% Logistics</li>
+      </ul>
+    </div>
+
+    <!-- Documents -->
+    <div id="documents2" class="snackbar-panel2">
+      <h4><i class="fa-solid fa-file-lines me-2"></i> Documents</h4>
+      <div class="document-list2 mt-3">
+        <div class="document-card2">
+          <span class="text-black"><i class="fa-solid text-black fa-file-pdf me-2"></i> Business Plan</span>
+          <button class="btn download-btn2"><i class="fa-solid fa-download me-1"></i> Download</button>
+        </div>
+        <div class="document-card2">
+          <span class="text-black"><i class="fa-solid text-black fa-file-contract me-2"></i> Terms</span>
+          <button class="btn download-btn2"><i class="fa-solid fa-download me-1"></i> Download</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risks -->
+    <div id="risks2" class="snackbar-panel2">
+      <h4><i class="fa-solid fa-triangle-exclamation me-2"></i> Risks</h4>
+      <p>Seasonality, competition with large marketplaces</p>
+      <div class="risk-warning2 mt-4 p-3">
+        ⚠️ <strong>Risk Warning:</strong> Investing involves risks. All capital may be lost.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const buttons2 = document.querySelectorAll('.snackbar-btn2');
+  const panels2 = document.querySelectorAll('.snackbar-panel2');
+
+  buttons2.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons2.forEach(b => b.classList.remove('active'));
+      panels2.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.target).classList.add('active');
+    });
+  });
+</script>
+ 
+  </section>
+
+</div>
+
+<div id="section3" class="toggle-section">
+
+  <section class=" project-invest-section container my-5">
+    <div class="row align-items-start">
+      <div class="col-lg-8">
+        <div class="project-box">
+      
+          <!-- Badges -->
+          <div class="project-badges d-flex flex-wrap gap-3 mb-3">
+            <span class="badge-pill"><i class="fab fa-bitcoin"></i> Crypto</span>
+            <span class="badge-pill"><i class="fas fa-lightbulb"></i> Idea</span>
+            <span class="badge-pill"><i class="fas fa-flag"></i> Mexico</span>
+          </div>
+      
+          <!-- Project Title -->
+          <h2 class="project-title">CryptoLearn</h2>
+          <p class="project-desc">
+            <i class="fas fa-graduation-cap"></i> Online blockchain and DeFi academy with blockchain-verified certifications.
+          </p>
+      
+          <!-- Circular Progress -->
+          <div class="progress-wrapper text-center my-4">
+            <div class="progress-circle">
+              <svg class="progress-ring" width="140" height="140">
+                <circle class="progress-ring__background" cx="70" cy="70" r="60" />
+                <circle class="progress-ring__progress" cx="70" cy="70" r="60" />
+              </svg>
+              <div class="progress-text">28%</div>
+            </div>
+          </div>
+      
+          <!-- Goal Cards -->
+          <div class="row g-3 justify-content-center">
+            <div class="col-md-4">
+              <div class="goal-card">
+                <i class="fas fa-coins"></i>
+                <h5>Cash Goal</h5>
+                <p>€15,000.00</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="goal-card">
+                <i class="fas fa-wallet"></i>
+                <h5>VertechCoin Goal</h5>
+                <p>30,000</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="goal-card">
+                <i class="fas fa-check-circle"></i>
+                <h5>Accepts Mix</h5>
+                <p>VertechCoin Only</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Funding Progress -->
+          <div class="fund-progress mt-4">
+            <h5><i class="fas fa-chart-line"></i> 28% Funded</h5>
+            <p><strong>€4,200 + 8,400 VertechCoin</strong></p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT SIDE -->
+      <div class="col-lg-4">
+        <div class="invest-box text-center">
+          <h4><i class="fas fa-hand-holding-usd"></i> Invest Now</h4>
+      
+          <p><strong>Minimum ticket:</strong> €50 / 125 VertechCoin</p>
+          <p><strong>Oversubscription rule:</strong> cap</p>
+          <p><strong>Jurisdiction:</strong> Mexico</p>
+      
+          <h5 class="mt-4"><i class="fas fa-gift"></i> Available Perks:</h5>
+          <ul class="text-start d-inline-block">
+            <li>
+              <strong>Free Course</strong> — Free access to the first course<br>
+              <small>(From 125 VertechCoin)</small>
+            </li>
+            <li class="mt-2">
+              <strong>Mentorship</strong> — 1:1 mentorship session<br>
+              <small>(From 250 VertechCoin)</small>
+            </li>
+          </ul>
+      
+          <div class="text-center mt-4">
+            <button class="invest-btn">Invest Now</button>
+          </div>
+      
+          <p class="note mt-3">
+            By clicking you accept the terms and conditions.<br>
+            <small>This is not financial advice.</small>
+          </p>
+        </div>
+      </div>
+      
+
+
+      <div class="col-12">
+        <div class="vcoin-simulator-box mt-5">
+          <h3 class="simulator-title"><i class="fas fa-coins me-2"></i>VertechCoin Price Simulator</h3>
+          <p class="simulator-subtext">See how VertechCoin price variation affects project valuation</p>
+      
+          <div class="simulator-content mt-4">
+            <div class="simulator-info">
+              <p><strong>VertechCoin price variation:</strong> <span id="variation3">-30%</span></p>
+              <input type="range" id="variationSlider3" min="-30" max="30" step="5" value="-30">
+            </div>
+      
+            <div class="simulator-stats mt-4">
+              <div class="stat-card">
+                <i class="fas fa-euro-sign"></i>
+                <p>Current VertechCoin price</p>
+                <h4 id="coinPrice3">€0.350</h4>
+              </div>
+      
+              <div class="stat-card">
+                <i class="fas fa-wallet"></i>
+                <p>VertechCoin value in EUR</p>
+                <h4 id="coinValue3">€28,000</h4>
+              </div>
+            </div>
+      
+            <div id="surplusNote3" class="surplus-note mt-4" style="display:none;">
+              <i class="fas fa-arrow-up me-2"></i>
+              <span>Surplus detected: <strong id="surplusAmount3">€2,000</strong></span>
+            </div>
+      
+            <p class="rule-note mt-3"><i class="fas fa-balance-scale me-2"></i>Applied rule: <strong>pro-rata</strong></p>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        const slider3 = document.getElementById("variationSlider3");
+        const variationDisplay3 = document.getElementById("variation3");
+        const coinPrice3 = document.getElementById("coinPrice3");
+        const coinValue3 = document.getElementById("coinValue3");
+        const surplusNote3 = document.getElementById("surplusNote3");
+        const surplusAmount3 = document.getElementById("surplusAmount3");
+      
+        let basePrice3 = 0.35;
+        let baseValue3 = 28000;
+      
+        slider3.addEventListener("input", function() {
+          let variation = parseInt(this.value);
+          variationDisplay3.textContent = variation + "%";
+      
+          // Smooth transitions
+          variationDisplay3.style.transition = "all 0.3s ease";
+          this.style.transition = "all 0.4s ease-out";
+      
+          // Updated logic for variation effect (750)
+          let newPrice = basePrice3 + (variation * 0.025 / 5);
+          let newValue = baseValue3 + (variation * 750 / 5);
+      
+          coinPrice3.textContent = "€" + newPrice.toFixed(3);
+          coinValue3.textContent = "€" + newValue.toLocaleString();
+      
+          if (variation > 0) {
+            surplusNote3.style.display = "flex";
+            surplusAmount3.textContent = "€" + (variation * 750 / 5).toLocaleString();
+          } else {
+            surplusNote3.style.display = "none";
+          }
+        });
+      </script>
+      
+
+
+
+<!-- Snackbar Navigation & Content (Third Project) -->
+<div class="col-12 mt-4">
+  <!-- Snackbar Navigation -->
+  <div class="snackbar-nav3 d-flex justify-content-center align-items-center flex-wrap gap-3 p-3 mb-4">
+    <button class="snackbar-btn3 active" data-target="overview3">
+      <i class="fa-solid fa-chart-line me-2"></i> Overview
+    </button>
+    <button class="snackbar-btn3" data-target="team3">
+      <i class="fa-solid fa-users me-2"></i> Team
+    </button>
+    <button class="snackbar-btn3" data-target="funds3">
+      <i class="fa-solid fa-coins me-2"></i> Funds
+    </button>
+    <button class="snackbar-btn3" data-target="documents3">
+      <i class="fa-solid fa-file-lines me-2"></i> Docs
+    </button>
+    <button class="snackbar-btn3" data-target="risks3">
+      <i class="fa-solid fa-triangle-exclamation me-2"></i> Risks
+    </button>
+  </div>
+
+  <!-- Snackbar Content -->
+  <div class="snackbar-content3">
+
+    <!-- Overview -->
+    <div id="overview3" class="snackbar-panel3 active">
+      <h4><i class="fa-solid fa-circle-info me-2"></i> Project Summary</h4>
+      <p class="mb-4">Online blockchain and DeFi academy with blockchain-verified certifications.</p>
+    </div>
+
+    <!-- Team -->
+    <div id="team3" class="snackbar-panel3">
+      <h4><i class="fa-solid fa-users me-2"></i> Team</h4>
+      <div class="team-members3 mt-3">
+        <div class="team-card3">
+          <h5 class="text-black">Robert Silva</h5>
+          <p class="text-black">CEO</p>
+          <a href="#" class="btn linkedin-btn3">
+            <i class="fa-brands fa-linkedin me-1"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Funds -->
+    <div id="funds3" class="snackbar-panel3">
+      <h4><i class="fa-solid fa-coins me-2"></i> Use of Funds</h4>
+      <ul class="funds-list3 mt-3">
+        <li>📘 60% Content</li>
+        <li>💻 25% Platform</li>
+        <li>📣 15% Marketing</li>
+      </ul>
+    </div>
+
+    <!-- Documents -->
+    <div id="documents3" class="snackbar-panel3">
+      <h4><i class="fa-solid fa-file-lines me-2"></i> Documents</h4>
+      <div class="document-list3 mt-3">
+        <div class="document-card3">
+          <span class="text-black"><i class="fa-solid text-black fa-file-pdf me-2"></i> MVP Demo</span>
+          <button class="btn download-btn3">
+            <i class="fa-solid fa-download me-1"></i> Download
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risks -->
+    <div id="risks3" class="snackbar-panel3">
+      <h4><i class="fa-solid fa-triangle-exclamation me-2"></i> Risks</h4>
+      <p>Educational regulation, blockchain certification adoption</p>
+      <div class="risk-warning3 mt-4 p-3">
+        ⚠️ <strong>Risk Warning:</strong> Investing involves risks. All capital may be lost.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const buttons3 = document.querySelectorAll('.snackbar-btn3');
+  const panels3 = document.querySelectorAll('.snackbar-panel3');
+
+  buttons3.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons3.forEach(b => b.classList.remove('active'));
+      panels3.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.target).classList.add('active');
+    });
+  });
+</script>
+   
+  </section>
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const bttns = document.querySelectorAll('.btns_1');
+    const sections = document.querySelectorAll('.toggle-section');
+    let activeSection = null; // track currently open section
+  
+    bttns.forEach(bttn => {
+      bttn.addEventListener('click', () => {
+        const targetId = bttn.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+  
+        // If the same button clicked again, hide it and reset state
+        if (activeSection === targetSection) {
+          targetSection.style.display = 'none';
+          targetSection.classList.remove('show');
+          bttns.forEach(b => b.classList.remove('active'));
+          activeSection = null;
+          return;
+        }
+  
+        // Hide all other sections
+        sections.forEach(sec => {
+          sec.style.display = 'none';
+          sec.classList.remove('show');
+        });
+  
+        // Show target section
+        targetSection.style.display = 'block';
+        setTimeout(() => targetSection.classList.add('show'), 50);
+  
+        // Update active button state
+        bttns.forEach(b => b.classList.remove('active'));
+        bttn.classList.add('active');
+  
+        // Set current active
+        activeSection = targetSection;
+      });
+    });
+  });
+  </script>
+  
+    
+
+
+
+
+
+
+  <script>
+    const buttons = document.querySelectorAll('.snackbar-btn');
+    const panels = document.querySelectorAll('.snackbar-panel');
+  
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active from all buttons
+        buttons.forEach(b => b.classList.remove('active'));
+        // Hide all panels
+        panels.forEach(p => p.classList.remove('active'));
+        // Activate clicked tab and related panel
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+  
+
+  
+  <script>
+    const slider = document.getElementById("variationSlider");
+    const variationDisplay = document.getElementById("variation");
+    const coinPrice = document.getElementById("coinPrice");
+    const coinValue = document.getElementById("coinValue");
+    const surplusNote = document.getElementById("surplusNote");
+    const surplusAmount = document.getElementById("surplusAmount");
+  
+    let basePrice = 0.35;
+    let baseValue = 28000;
+  
+    slider.addEventListener("input", function() {
+      let variation = parseInt(this.value);
+      variationDisplay.textContent = variation + "%";
+  
+      // Smooth animation effect
+      variationDisplay.style.transition = "all 0.3s ease";
+      this.style.transition = "all 0.4s ease-out";
+  
+      // Update values smoothly
+      let newPrice = basePrice + (variation * 0.025 / 5);
+      let newValue = baseValue + (variation * 2000 / 5);
+  
+      coinPrice.textContent = "€" + newPrice.toFixed(3);
+      coinValue.textContent = "€" + newValue.toLocaleString();
+  
+      if (variation > 0) {
+        surplusNote.style.display = "flex";
+        surplusAmount.textContent = "€" + (variation * 2000 / 5).toLocaleString();
+      } else {
+        surplusNote.style.display = "none";
+      }
+    });
+  </script>
+  
+  
+  
+
+
+  <!--Modern Footer -->
+<!--Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Brand Info -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h3 class="footer-logo">VertechCoin</h3>
+          <p class="footer-desc flex-grow-1">
+            Where entrepreneurs and investors meet. Fuel innovation with smart funding solutions powered by VertechCoin.
+          </p>
+          <div class="socials">
+            <a href="project1.html"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-medium-m"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links flex-grow-1">
+            <li><a href="whitepaper.html">Whitepaper</a></li>
+            <li><a href="projectnew.html">Projects</a></li>
+            <li><a href="invest.html">Investors</a></li>
+            <li><a href="token.html">Tokenomics</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Legal -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column">
+          <h5 class="footer-heading">Legal</h5>
+          <ul class="footer-links flex-grow-1">
+            <li><a href="/public/Privacy_Policy.pdf" target="_blank">Privacy Policy</a></li>
+            <li><a href="/public/Terms_of_Service.pdf" target="_blank">Terms of Service</a></li>
+            <li><a href="/public/Risk_Disclosure.pdf" target="_blank">Risk Disclosure</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Subscribe -->
+      <!-- <div class="col-lg-3 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column text-center">
+          <h5 class="footer-heading">Stay Updated</h5>
+          <p class="footer-desc flex-grow-1">
+            Get the latest updates on VertechCoin and new project launches
+          </p>
+          <form class="subscribe-form d-flex">
+            <input type="email" class="form-control" placeholder="Enter your email">
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </form>
+        </div>
+      </div> -->
+    </div>
+    <!-- Bottom -->
+    <div class="footer-bottom text-center mt-5">
+      <p>© 2025 VertechCoin. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+  <script>
+// Search filtering logic only
+function searchProjects() {
+  const searchText = document.querySelector('.search-input').value.trim().toLowerCase();
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    const cardTitle = card.querySelector('.card-t').textContent.toLowerCase();
+    const cardDescription = card.querySelector('.small1').textContent.toLowerCase();
+
+    let searchMatch = (searchText === "" || cardTitle.includes(searchText) || cardDescription.includes(searchText));
+
+    if (searchMatch) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+// Attach live search
+document.querySelector('.search-input').addEventListener('input', searchProjects);
+</script>
+
+
+  
+  
+  <script>
+    // Handle tick selection in dropdowns
+document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const menu = this.closest('.dropdown-menu');
+    menu.querySelectorAll('.dropdown-item').forEach(el => el.classList.remove('active'));
+    this.classList.add('active');
+
+    const button = this.closest('.dropdown').querySelector('.dropdown-toggle');
+    button.textContent = this.textContent;
+
+    filterProjects();
+  });
+});
+
+// Filtering logic
+function filterProjects() {
+  const category = document.querySelector('#categoriesDropdown').textContent.trim();
+  const stage = document.querySelector('#stagesDropdown').textContent.trim();
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    const cardCategory = card.getAttribute('data-category');
+    const cardStage = card.getAttribute('data-stage');
+
+    let categoryMatch = (category === "All Categories" || cardCategory === category);
+    let stageMatch = (stage === "All Stages" || cardStage === stage);
+
+    if (categoryMatch && stageMatch) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+  </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".circular-progress").forEach(circle => {
+      const target = circle.getAttribute("data-progress");
+      let value = 0;
+
+      const interval = setInterval(() => {
+        value++;
+        circle.style.setProperty("--progress", value);
+        circle.querySelector(".circular-progress-value").textContent = value + "%";
+
+        if (value >= target) clearInterval(interval);
+      }, 20); // speed (lower = faster)
+    });
+  });
+</script>
+
+<script>
+  // Run after page loads
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop(); 
+    const navLinks = document.querySelectorAll(".custom-navbar .nav-link");
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+  <!-- Custom JS -->
+   <script>
+    //  const apiURL = "http://localhost:5000";
+     const apiURL = "https://vcoin-backend.onrender.com";
+
+  // Fetch and render projects dynamically
+  async function loadProjects() {
+    try {
+      const response = await fetch(`${apiURL}/api/getPublisheddata`);
+      const data = await response.json();
+
+      const projectsContainer = document.getElementById("projectsList");
+      projectsContainer.innerHTML = ""; // Clear previous content
+
+      if (!Array.isArray(data) || data.length === 0) {
+        projectsContainer.innerHTML = `<p class="text-center text-white">No published projects found.</p>`;
+        return;
+      }
+
+      data.forEach(project => {
+        const { projectName, description, pdf, totalGoal, totalAmount } = project;
+
+        // Calculate progress percentage
+        const progress = Math.min(Math.round((totalAmount / totalGoal) * 100), 100);
+
+        // Card HTML
+        const cardHTML = `
+          <div class="col-md-4 mb-4 project-card">
+            <div class="card glass-card p-3 h-100">
+              
+              <!-- Header -->
+              <div class="card-header-section">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge">Startup</span>
+                  <span class="status-badge status-online">
+                    <span class="status-dot"></span> Open
+                  </span>
+                </div>
+                <h5 class="fw-bold card-t">${projectName}</h5>
+                <p class="text-white mb-2 d-flex align-items-center gap-2">
+                  <span class="glass-icon"><i class="fas fa-map-marker-alt"></i></span>
+                  Spain • MVP
+                </p>
+                <p class="small1 text-white">${description}</p>
+              </div>
+
+              <!-- Funding -->
+              <div class="card-funding-section">
+                <div class="d-flex justify-content-between fw-bold">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="glass-icon1"><i class="fas fa-bullseye"></i></span>
+                    <span style="color: rgb(21, 208, 21);">Goal:</span>
+                  </div>
+                  <span>€${totalGoal.toLocaleString()}</span>
+                </div>
+              </div>
+
+              <!-- Ticket Section -->
+              <div class="card-ticket-section">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                      <span class="glass-icon1"><i class="fas fa-ticket-alt"></i></span>
+                      <p class="mb-0 fw-bold text-white">Minimum Ticket:</p>
+                    </div>
+                    <p class="small text-white">Excess rule:</p>
+                  </div>
+                  <div class="text-end">
+                    <p class="mb-0 fw-bold text-white">€100.00</p>
+                    <p class="small text-white badge">Pro-rata</p>
+                  </div>
+                </div>
+
+                <!-- Circular Progress -->
+                <div class="circular-progress-wrapper text-center my-3">
+                  <div class="circular-progress" data-progress="${progress}">
+                    <span class="circular-progress-value">${progress}%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <div class="text-center mt-auto">
+                <button class="view-btn" onclick="downloadPDF('${pdf}')">Download PDF</button>
+              </div>
+
+            </div>
+          </div>
+        `;
+
+        projectsContainer.innerHTML += cardHTML;
+      });
+
+      // Apply circular progress styling
+      document.querySelectorAll(".circular-progress").forEach(elem => {
+        const value = elem.getAttribute("data-progress");
+        elem.style.background = `conic-gradient(rgb(21,208,21) ${value * 3.6}deg, rgba(255,255,255,0.1) ${value * 3.6}deg)`;
+      });
+
+    } catch (error) {
+      console.error("Error loading projects:", error);
+      document.getElementById("projectsList").innerHTML =
+        `<p class="text-center text-danger">Error fetching projects.</p>`;
+    }
+  }
+
+  // PDF open function
+  function downloadPDF(filename) {
+    if (!filename) {
+      alert("No pitch deck available for this project.");
+      return;
+    }
+    window.open(`${apiURL}/uploads/${filename}`, "_blank");
+  }
+
+  // Initialize on page load
+  document.addEventListener("DOMContentLoaded", loadProjects);
+   </script>
+  <script src="script.js"></script>
+</body>
+</html>

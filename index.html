@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VertechCoincapital-Home</title>
+  <link rel="icon" type="image/png" href="images/new-logo-BuRQRJTO.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/index.css">
+  <!-- <link rel="stylesheet" href="css/token.css"> -->
+</head>
+
+<body style=" background: black; overflow-x: hidden;   font-family: 'Outfit', sans-serif !important;">
+
+  <div id="pitchModal" class="modal">
+    <div class="modal-content">
+      <div class="d-flex justify-content-between flex-row">
+        <h2 class="modal-title">Submit Your Project</h2>
+        <span class="close-btn text-end" onclick="closeForm()">&times;</span>
+      </div>
+  
+      <p class="modal-subtitle">
+        Tell us about your project and upload your pitch deck or business documents.
+      </p>
+  
+      <form class="pitch-form" id="pitchForm" enctype="multipart/form-data">
+        <!-- Documents -->
+        <div class="form-section">
+          <h3>Documents</h3>
+          <label>Upload up to 3 files (PDF, DOC, XLSX — max 10MB each)</label>
+          <input 
+            type="file" 
+            name="projectFiles" 
+            id="projectFiles" 
+            accept=".pdf, .doc, .docx, .xlsx" 
+            multiple 
+            required
+          >
+          <small class="text-muted d-block mt-1">
+            You can attach up to 3 files.
+          </small>
+        </div>
+  
+        <!-- Company Information -->
+        <div class="form-section">
+          <h3>Company Information</h3>
+          <div class="form-row">
+            <input type="text" name="companyName" placeholder="Company Name *" required>
+            <input type="url" name="websiteLink" placeholder="Website (https://)" required>
+          </div>
+          <div class="form-row">
+            <input type="number" name="foundedYear" placeholder="Founded (Year)" required>
+            <input type="text" name="location" placeholder="Location (City, Country)" required>
+          </div>
+        </div>
+  
+        <!-- Project Details -->
+        <div class="form-section">
+          <h3>Project Details</h3>
+          <input type="text" name="projectName" placeholder="Project Name">
+          <input type="text" name="oneLinePitch" placeholder="One-line Pitch" required>
+          <textarea name="problemAndSolution" placeholder="Problem & Solution" required></textarea>
+          <div class="form-row">
+            <input type="text" name="targetMarket" placeholder="Target Market" required>
+            <input type="text" name="businessModel" placeholder="Business Model" required>
+          </div>
+        </div>
+  
+        <!-- Financial Information -->
+        <div class="form-section">
+          <h3>Financial Information</h3>
+          <div class="form-row">
+            <input type="number" name="fundingAmountNeeded" placeholder="Funding Amount Needed ($100,000)" required>
+            <input type="number" name="currentRevenue" placeholder="Current Revenue ($0 or current amount)" required>
+          </div>
+          <textarea name="useOfFunds" placeholder="Use of Funds"></textarea>
+        </div>
+  
+        <!-- Funding Type & Structure -->
+        <div class="form-section">
+          <h3>Funding Type & Structure</h3>
+          <label for="fundingType">Select Type of Funding:</label>
+          <div class="form-row">
+            <select name="fundingType" id="fundingType" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="rewards">Rewards / Perks</option>
+              <option value="revenue-share">Revenue Share</option>
+              <option value="equity-like">Equity-like</option>
+            </select>
+            <select name="excessManagement" id="excessManagement" required>
+              <option value="" disabled selected>Excess Management Choice</option>
+              <option value="retain">Retain Excess</option>
+              <option value="redistribute">Redistribute to Investors</option>
+              <option value="reinvest">Reinvest in Project</option>
+            </select>
+          </div>
+  
+          <div class="form-row">
+            <input type="number" name="cashSum" placeholder="Sum in Cash ($)" required>
+            <input type="number" name="tokenSum" placeholder="Sum in Tokens" required>
+          </div>
+        </div>
+  
+        <!-- Team -->
+        <div class="form-section">
+          <h3>Team</h3>
+          <textarea name="founderBackground" placeholder="Founder Background" required></textarea>
+          <div class="form-row">
+            <input type="number" name="teamSize" placeholder="Team Size" required>
+            <input type="text" name="keyTeamMembers" placeholder="Key Team Members" required>
+          </div>
+        </div>
+  
+        <!-- Traction -->
+        <div class="form-section">
+          <h3>Traction & Progress</h3>
+          <textarea name="currentTraction" placeholder="Current Traction" required></textarea>
+          <div class="form-row">
+            <input type="text" name="currentCustomer" placeholder="Current Customers" required>
+            <input type="text" name="keyPartnerships" placeholder="Key Partnerships" required>
+          </div>
+        </div>
+  
+        <!-- Contact -->
+        <div class="form-section">
+          <h3>Contact Information</h3>
+          <div class="form-row">
+            <input type="text" name="founderName" placeholder="Founder Name *" required>
+            <input type="email" name="email" placeholder="Email *" required>
+          </div>
+          <div class="form-row">
+            <input type="url" name="linkedinProfileLink" placeholder="LinkedIn Profile (https://)" required>
+            <input type="tel" name="phoneNumber" placeholder="Phone (+1 555 123-4567)" required>
+          </div>
+        </div>
+  
+        <!-- Buttons -->
+        <div class="form-actions">
+          <button type="button" class="btn-cancel" onclick="closeForm()">Cancel</button>
+          <button type="submit" class="btn-submit">Submit Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
+<script>
+  document.getElementById('projectFiles').addEventListener('change', function() {
+    if (this.files.length > 3) {
+      alert('You can upload a maximum of 3 files.');
+      this.value = ''; // reset the field
+    }
+  });
+</script>
+
+
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/new-logo-BuRQRJTO.png" alt="VertechCoin Logo" class="me-2" style="height: 55px;">
+        <span>VertechCoincapital</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1"></i>
+            Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="projectnew.html"><i class="fa-solid fa-diagram-project me-1"></i>
+              Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="how-works.html"><i class="fa-solid fa-lightbulb me-1"></i> How
+              it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="invest.html"><i class="fa-solid fa-users me-1"></i>
+              Investors</a></li>
+          <li class="nav-item"><a class="nav-link" href="entrepreneurs.html"><i class="fa-solid fa-briefcase me-1"></i>
+              Entrepreneurs</a></li>
+          <li class="nav-item"><a class="nav-link" href="token.html"><i class="fa-solid fa-coins me-1"></i> Tokenomics</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="whitepaper.html"><i class="fa-solid fa-file-lines me-1"></i>
+              Whitepaper</a></li>
+        </ul>
+      </div>
+      <div class="nav-buttons d-none d-lg-block">
+        <button class="btn glass-btn me-2" onclick="alert('Coming soon')"><i class="fa-solid fa-wallet me-1"></i> Buy Now</button>
+        <a href="projects.html"><button class="btn glass-btn"><i class="fa-solid fa-compass me-1"></i> Explore
+            Projects</button></a>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Hero Section -->
+  <section class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Content -->
+        <div class="col-lg-6">
+          <h1 class="hero-title">
+            Where Entrepreneurs<br> and Investors Meet<br> Powered by VertechCoin
+          </h1>
+          <p>
+            VertechCoin is the token that connects capital with innovation.
+            Invest in real projects, or launch yours and raise funds in a smarter way.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn-main">Get VertechCoin & Invest</button>
+            <!-- Pitch Button -->
+            <button class="btn-main alt" onclick="openForm()">Pitch Your Project</button>
+
+            
+
+
+
+
+          </div>
+        </div>
+
+        <!-- Right Card -->
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <div class="vc-dashboard-card-glass">
+            
+            <!-- Live Badge -->
+            <div class="vc-live-badge-glass">
+              <span class="vc-dot"></span> Presale is Live
+            </div>
+        
+            <!-- Logo (Top Right Corner) -->
+            <img src="images/new-logo-BuRQRJTO.png" alt="VertechCoin Logo" class="vc-card-logo-top">
+        
+            <!-- Header -->
+            <!-- <h4 class="vc-card-title-glass"><i class="fas fa-coins me-2"></i> VertechCoin Dashboard</h4> -->
+            <p class="vc-card-subtitle-glass mt-5">Access real-time presale data and token progress</p>
+        
+            <!-- Stage Info -->
+            <div class="vc-stage-box-glass">
+              <div class="vc-stage-section">
+                <div class="vc-stage-left">
+                  <strong><i class="fas fa-flag me-2"></i> STAGE 1 NOW:</strong><br>
+                  <span class="vc-stage-price">€0.50</span>
+                </div>
+                <div class="vc-stage-right">
+                  <p class="vc-stage-details"><i class="fas fa-hourglass-half me-1"></i> Initial Price: <strong>€0.50</strong></p>
+                  <p class="vc-stage-progress"><i class="fas fa-chart-line me-1"></i> Progress: <strong>60%</strong></p>
+                </div>
+              </div>
+        
+              <div class="vc-inner-divider"></div>
+        
+              <div class="vc-info-details">
+                <p><i class="fas fa-arrow-up me-2"></i> <strong>Next Stage Price:</strong> €0.60</p>
+                <p><i class="fas fa-coins me-2"></i> <strong>Tokens Sold:</strong> 120,000 / 200,000</p>
+                <p><i class="fas fa-clock me-2"></i> <strong>Ends In:</strong> 4d 12h</p>
+              </div>
+            </div>
+        
+            <!-- CTA -->
+            <a href="#" class="vc-join-btn-glass"><i class="fas fa-wallet me-2"></i> Join Presale</a>
+        
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+
+  <!-- 🔄 Sliding Bar -->
+  <div class="sliding-bar">
+    <div class="sliding-track">
+      <div class="slide"><i class="fas fa-fire"></i> VertechCoin Presale Live Now</div>
+      <div class="slide"><i class="fas fa-rocket"></i> Backed by Real Projects</div>
+      <div class="slide"><i class="fas fa-coins"></i> Hybrid Funding Model</div>
+      <div class="slide"><i class="fas fa-globe"></i> Global Community</div>
+      <div class="slide"><i class="fas fa-lock"></i> Audited Smart Contracts</div>
+      <!-- duplicate for seamless loop -->
+      <div class="slide"><i class="fas fa-fire"></i> VertechCoin Presale Live Now</div>
+      <div class="slide"><i class="fas fa-rocket"></i> Backed by Real Projects</div>
+      <div class="slide"><i class="fas fa-coins"></i> Hybrid Funding Model</div>
+      <div class="slide"><i class="fas fa-globe"></i> Global Community</div>
+      <div class="slide"><i class="fas fa-lock"></i> Audited Smart Contracts</div>
+    </div>
+  </div>
+
+
+
+
+  <!-- 🌐 Trust & Community Section -->
+  <section class="trust-section">
+    <div class="container">
+
+      <!-- First Row -->
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6 text-left">
+          <h2 class="trust-title animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+            Trust & <br> Community
+          </h2>
+          <p class="trust-subtext animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+            Built on transparency, security, and global collaboration.
+          </p>
+        </div>
+        <div class="col-md-6 animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+          <!-- Card 1 -->
+          <div class="trust-card trust-card-highlight ">
+            <div class="trust-badge">Transparency</div>
+            <div class="icon-wrapper">
+              <i class="fas fa-eye trust-icon"></i>
+            </div>
+            <h4 class="trust-card-title">Project Transparency</h4>
+            <p>Clear project information and consistent updates ensure that our community always knows where we stand.
+            </p>
+
+            <!-- Dots -->
+            <div class="trust-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="row">
+        <!-- Card 2 -->
+        <div class="col-md-6 mb-4 animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+          <div class="trust-card trust-card-highlight">
+            <div class="trust-badge">Security</div>
+            <div class="icon-wrapper">
+              <i class="fas fa-lock trust-icon"></i>
+            </div>
+            <h4 class="trust-card-title">Secure Smart Contracts</h4>
+            <p>Audited, tested, and optimized protocols give peace of mind to every user and investor in the ecosystem.
+            </p>
+
+            <!-- Dots -->
+            <div class="trust-dots">
+              <span class="dot"></span>
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 mb-4 animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+          <div class="trust-card trust-card-highlight">
+            <div class="trust-badge">Community</div>
+            <div class="icon-wrapper">
+              <i class="fas fa-globe trust-icon"></i>
+            </div>
+            <h4 class="trust-card-title">Global Community</h4>
+            <p>Engaging with a strong international community of innovators, investors, and builders.</p>
+
+            <!-- Dots -->
+            <div class="trust-dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot active"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+<!-- how -->
+<section class="vc-works py-5">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="section-heading text-center mb-5 animate-on-scroll animate__animated"
+      data-animation="animate__fadeInDown">
+      <h2>How VertechCoin Works</h2>
+      <p class="section-subtext">
+        A simple yet powerful process designed to connect investors and entrepreneurs
+        through trust, transparency, and opportunities.
+      </p>
+      <div class="heading-line"></div>
+    </div>
+
+    <div class="row align-items-center g-4">
+
+      <!-- Left 2x2 Grid -->
+      <div class="col-lg-8 animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+        <div class="row g-4">
+          <!-- Step 1 -->
+          <div class="col-md-6">
+            <div class="vc-card">
+              <h5><span class="title-border"></span><i class="fas fa-shopping-cart me-2"></i> Buy $VCC</h5>
+              <div class="divider"></div>
+              <p>Purchase tokens easily and become part of the VertechCoin ecosystem.</p>
+              <span class="center-bar"></span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-md-6">
+            <div class="vc-card">
+              <h5><span class="title-border"></span><i class="fas fa-search me-2"></i> Discover Projects</h5>
+              <div class="divider"></div>
+              <p>Explore verified projects, filter by industry, and assess potential.</p>
+              <span class="center-bar"></span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-md-6">
+            <div class="vc-card">
+              <h5><span class="title-border"></span><i class="fas fa-handshake me-2"></i> Invest Directly</h5>
+              <div class="divider"></div>
+              <p>Connect and invest directly in projects using VertechCoin or traditional methods.</p>
+              <span class="center-bar"></span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="col-md-6">
+            <div class="vc-card">
+              <h5><span class="title-border"></span><i class="fas fa-chart-line me-2"></i> Track Growth</h5>
+              <div class="divider"></div>
+              <p>Monitor your portfolio performance in real time through your dashboard.</p>
+              <span class="center-bar"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-4 text-center animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+        <img src="images/gradient-element2.png" alt="VertechCoin Process" class="img-fluid rounded premium-img">
+      </div>
+
+    </div>
+
+    <!-- Bottom Full-Width Cards -->
+    <div class="row g-4 mt-5">
+      <!-- Investors -->
+      <div class="col-md-6 animate-on-scroll animate__animated" data-animation="animate__fadeInLeft">
+        <div class="vc-card big-card">
+          <h3><span class="title-border"></span><i class="fas fa-user-tie me-2"></i> For Investors</h3>
+          <div class="divider"></div>
+          <p>
+            Access a curated list of real projects. Diversify in startups, real estate, and innovation.
+            Multiply your capital if the token value rises.
+          </p>
+          <button class="btn-main" onclick="alert('Coming soon')">Buy VertechCoin & Invest</button>
+          <span class="center-bar"></span>
+        </div>
+      </div>
+
+      <!-- Entrepreneurs -->
+      <div class="col-md-6 animate-on-scroll animate__animated" data-animation="animate__fadeInRight">
+        <div class="vc-card big-card">
+          <h3><span class="title-border"></span><i class="fas fa-rocket me-2"></i> For Entrepreneurs</h3>
+          <div class="divider"></div>
+          <p>
+            Publish your project with cash + VertechCoin goals. Upload documents, define reward rules, and
+            engage your community to reach the next level.
+          </p>
+          <button class="btn-main alt" onclick="openForm()">Submit Your Project</button>
+          <span class="center-bar"></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+  <!-- 🌐 FAQ Section -->
+  <section class="faq-section py-5">
+    <div class="container text-center">
+      <h2 class="faq-title mb-3 animate-on-scroll animate__animated" data-animation="animate__fadeInDown">Frequently
+        Asked Questions</h2>
+      <p class="faq-subtitle mb-0 animate-on-scroll animate__animated" data-animation="animate__fadeInDown">
+        Get answers to the most common questions about VertechCoin, our platform, and hybrid funding model.
+      <div class="heading-line mb-5"></div>
+      </p>
+
+
+
+      <!-- Dark Gradient Container -->
+      <div class="faq-container">
+        <div class="faq-wrapper mx-auto">
+          <div class="accordion" id="faqAccordion">
+
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item glass-card">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#answer1">
+                  <span class="icon-circle"><i class="fas fa-plus"></i></span>
+                  What is VertechCoin and how does it work?
+                </button>
+              </h2>
+              <div id="answer1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  VertechCoin is a utility token that connects investors and entrepreneurs through hybrid funding. Projects
+                  can raise both cash and VertechCoin, creating aligned incentives between founders and their community. Token
+                  holders can invest in curated projects and benefit if VertechCoin's value increases.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item glass-card">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#answer2">
+                  <span class="icon-circle"><i class="fas fa-plus"></i></span>
+                  How do I participate in the presale?
+                </button>
+              </h2>
+              <div id="answer2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  To participate in the presale, connect your wallet to our platform, choose your payment method (ETH,
+                  USDT, or Credit Card), enter the amount you want to purchase, and complete the transaction. Your VertechCoin
+                  tokens will be distributed after the presale ends.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item glass-card">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#answer3">
+                  <span class="icon-circle"><i class="fas fa-plus"></i></span>
+                  What are the benefits of holding VertechCoin?
+                </button>
+              </h2>
+              <div id="answer3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  VertechCoin holders get early access to projects, better allocation terms, and exclusive perks. As the token
+                  value grows, your investment power increases. You can also participate in platform governance and
+                  access premium features.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item glass-card">
+              <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#answer4">
+                  <span class="icon-circle"><i class="fas fa-plus"></i></span>
+                  How does hybrid funding work?
+                </button>
+              </h2>
+              <div id="answer4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Projects set both cash and VertechCoin goals. If VertechCoin's price rises during the campaign, founders can
+                  capture more value while investors benefit from increased token value. Excess handling rules are
+                  transparent and defined upfront.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item glass-card">
+              <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#answer5">
+                  <span class="icon-circle"><i class="fas fa-plus"></i></span>
+                  Is VertechCoin secure and compliant?
+                </button>
+              </h2>
+              <div id="answer5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, VertechCoin operates with full regulatory compliance including KYC/AML verification. Our smart
+                  contracts are audited, and we work with trusted custody partners. All project listings undergo
+                  thorough due diligence.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="accordion-item glass-card">
+              <h2 class="accordion-header" id="faq6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#answer6">
+                  <span class="icon-circle"><i class="fas fa-plus"></i></span>
+                  What types of projects can I invest in?
+                </button>
+              </h2>
+              <div id="answer6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  VertechCoin features curated projects across various sectors including startups, real estate, innovation
+                  projects, and more. Each project undergoes due diligence and offers clear terms, risk assessments, and
+                  progress tracking.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-5">
+        <p class="mb-3 text-white">Still have questions?</p>
+        <a href="mailto:info@vcoincapital.com" class="btn btn-faq">Contact Support</a>
+
+      </div>
+    </div>
+
+    <div class="faq-decoration d-none d-md-block d-lg-block">
+      <img src="/images/gradient-element.png" alt="Decoration">
+    </div>
+  </section>
+
+
+
+
+
+
+  <!--Modern Footer -->
+  <!--Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4">
+
+        <!-- Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-card glass h-100 d-flex flex-column">
+            <h3 class="footer-logo">VertechCoin</h3>
+            <p class="footer-desc flex-grow-1">
+              Where entrepreneurs and investors meet. Fuel innovation with smart funding solutions powered by VertechCoin.
+            </p>
+            <div class="socials">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-telegram-plane"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-medium-m"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-card glass h-100 d-flex flex-column">
+            <h5 class="footer-heading">Quick Links</h5>
+            <ul class="footer-links flex-grow-1">
+              <li><a href="whitepaper.html">Whitepaper</a></li>
+              <li><a href="projectnew.html">Projects</a></li>
+              <li><a href="invest.html">Investors</a></li>
+              <li><a href="token.html">Tokenomics</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Legal -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-card glass h-100 d-flex flex-column">
+            <h5 class="footer-heading">Legal</h5>
+            <ul class="footer-links flex-grow-1">
+              <li><a href="/public/Privacy_Policy.pdf" target="_blank">Privacy Policy</a></li>
+              <li><a href="/public/Terms_of_Service.pdf" target="_blank">Terms of Service</a></li>
+              <li><a href="/public/Risk_Disclosure.pdf" target="_blank">Risk Disclosure</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Subscribe -->
+        <!-- <div class="col-lg-3 col-md-6">
+        <div class="footer-card glass h-100 d-flex flex-column text-center">
+          <h5 class="footer-heading">Stay Updated</h5>
+          <p class="footer-desc flex-grow-1">
+            Get the latest updates on VertechCoin and new project launches
+          </p>
+          <form class="subscribe-form d-flex">
+            <input type="email" class="form-control" placeholder="Enter your email">
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </form>
+        </div>
+      </div> -->
+
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom text-center mt-5">
+        <p>© 2025 VertechCoin. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Animation Script-->
+  <script>
+    // Function to handle the intersection of the target elements
+    function handleIntersection(entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const targetElement = entry.target;
+          const animationClass = targetElement.dataset.animation;
+
+          if (animationClass) {
+            targetElement.classList.add(animationClass);
+            // Remove the animate-on-scroll class to prevent animation on subsequent scrolls
+            targetElement.classList.remove('animate-on-scroll');
+          }
+        }
+      });
+    }
+
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0,
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    // Observe all elements with the "animate-on-scroll" class
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
+
+
+
+
+</style>
+            
+<script>
+function openForm() {
+  document.getElementById("pitchModal").style.display = "flex";
+}
+function closeForm() {
+  document.getElementById("pitchModal").style.display = "none";
+}
+// Close when clicking outside modal content
+window.onclick = function(event) {
+  const modal = document.getElementById("pitchModal");
+  if (event.target === modal) {
+    closeForm();
+  }
+}
+
+
+
+
+
+document.getElementById("pitchForm").addEventListener("submit", async function(e) {
+e.preventDefault();
+
+const form = e.target;
+const formData = new FormData(form);
+
+
+
+const file = formData.get("pitchDeck");
+if (file && file.size > 10 * 1024 * 1024) {
+alert("File must be under 10MB");
+return;
+}
+
+
+
+
+try {
+// const res = await fetch("http://localhost:5000/api/projects/add", {
+const res = await fetch("https://vcoin-backend.onrender.com/api/projects/add", {
+method: "POST",
+body: formData
+});
+
+if (res.ok) {
+alert(" Project submitted successfully!");
+form.reset();
+closeForm();
+} else {
+const error = await res.json();
+alert(" Submission failed: " + (error.error || "Unknown error"));
+}
+} catch (err) {
+alert(" Submission failed: " + err.message);
+}
+});
+
+
+
+
+
+</script>
+
+
+<script>
+  // Run after page loads
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop(); 
+    const navLinks = document.querySelectorAll(".custom-navbar .nav-link");
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

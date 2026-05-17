@@ -1,0 +1,140 @@
+ /* 🌟 Bright Yellow Premium Footer */
+ .footer {
+  background: linear-gradient(90deg, rgba(15, 10, 0, 0.95) 0%, rgba(50, 40, 0, 0.95) 100%);
+  padding: 30px 0 5px;
+  color: #fffbe0;
+  position: relative;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Glass Card Effect */
+.footer-card {
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255, 237, 0, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 237, 0, 0.2);
+  transition: 0.3s;
+}
+
+.footer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(255, 237, 0, 0.25);
+}
+
+/* Logo */
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #fff88e, #FFED00, #fff56a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Headings */
+.footer-heading {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 237, 0, 0.3);
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #FFED00;
+}
+
+/* Description */
+.footer-desc {
+  font-size: 0.95rem;
+  color: #fffad1;
+  margin-bottom: 20px;
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #fff9b0;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #FFED00;
+  text-shadow: 0 0 8px rgba(255, 237, 0, 0.6);
+}
+
+/* Social Buttons */
+.socials a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: rgba(255, 237, 0, 0.08);
+  backdrop-filter: blur(10px);
+  color: #fffbe6;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  text-decoration: none !important;
+}
+
+.socials a:hover {
+  background: linear-gradient(135deg, #FFED00, #fff56a);
+  color: #1a1a1a;
+  box-shadow: 0 0 10px rgba(255, 237, 0, 0.5);
+}
+
+/* Subscribe Section */
+.subscribe-form {
+  gap: 10px;
+}
+
+.subscribe-form input {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 15px;
+  flex: 1;
+  outline: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: #3a3000;
+  font-weight: 500;
+}
+
+.btn-subscribe {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #FFED00, #fff56a);
+  color: #2a1a00;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(255, 237, 0, 0.3);
+}
+
+.btn-subscribe:hover {
+  background: linear-gradient(135deg, #fff56a, #FFED00);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 237, 0, 0.4);
+}
+
+/* Bottom Section */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #fff8b5;
+  text-align: center;
+}
+ 
